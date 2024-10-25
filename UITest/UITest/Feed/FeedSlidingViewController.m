@@ -9,6 +9,8 @@
 #import "FeedSlidingScrollView.h"
 #import "../Transition/TransitionManager.h"
 #import "./Profile/OtherProfileViewController.h"
+#import "Feed2ProfileTransition.h"
+#import "FeedSlidingViewController+Transition.h"
 
 @interface FeedSlidingViewController ()
 @property (nonatomic, strong) FeedSlidingScrollView *scrolleView;
@@ -70,12 +72,19 @@
         || gestureRecognizer.state == UIGestureRecognizerStateCancelled) {
         CGPoint translation = [gestureRecognizer translationInView:self.view];
         if (self.direction==scrollDirectionLeft){
-            [self.navigationController pushViewController:[[OtherProfileViewController alloc] init] animated:YES];
-            NSLog(@"pushViewController OtherProfileViewController");
+            [self transition2Profile];
         }
     }
 }
 
+- (void)transition2Profile
+{
+ 
+    self.navigationController.delegate = self;
+    [self.navigationController pushViewController:[[OtherProfileViewController alloc] init] animated:YES];
+    NSLog(@"pushViewController OtherProfileViewController");
+    
+}
 //[self.navigationController pushViewController:[[OtherProfileViewController alloc] init] animated:YES];
 
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer

@@ -23,6 +23,8 @@
 		2B2E9F062CCB6FE100DFC9ED /* TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F052CCB6FE100DFC9ED /* TabBar.m */; };
 		2B2E9F0C2CCB821900DFC9ED /* TransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F0A2CCB821900DFC9ED /* TransitionManager.m */; };
 		2B2E9F0D2CCB821900DFC9ED /* UINavigationController+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F0B2CCB821900DFC9ED /* UINavigationController+Transition.m */; };
+		2B2E9F102CCB90C500DFC9ED /* Feed2ProfileTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F0F2CCB90C500DFC9ED /* Feed2ProfileTransition.m */; };
+		2B2E9F132CCB92C300DFC9ED /* FeedSlidingViewController+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F122CCB92C300DFC9ED /* FeedSlidingViewController+Transition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,10 @@
 		2B2E9F092CCB821900DFC9ED /* TransitionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionManager.h; sourceTree = "<group>"; };
 		2B2E9F0A2CCB821900DFC9ED /* TransitionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionManager.m; sourceTree = "<group>"; };
 		2B2E9F0B2CCB821900DFC9ED /* UINavigationController+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Transition.m"; sourceTree = "<group>"; };
+		2B2E9F0E2CCB90C500DFC9ED /* Feed2ProfileTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feed2ProfileTransition.h; sourceTree = "<group>"; };
+		2B2E9F0F2CCB90C500DFC9ED /* Feed2ProfileTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Feed2ProfileTransition.m; sourceTree = "<group>"; };
+		2B2E9F112CCB92C300DFC9ED /* FeedSlidingViewController+Transition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedSlidingViewController+Transition.h"; sourceTree = "<group>"; };
+		2B2E9F122CCB92C300DFC9ED /* FeedSlidingViewController+Transition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FeedSlidingViewController+Transition.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,10 @@
 				2B2E9EFD2CCB6F9700DFC9ED /* FeedSlidingViewController.m */,
 				2B2E9EFE2CCB6F9700DFC9ED /* FeedTableViewController.h */,
 				2B2E9EFC2CCB6F9700DFC9ED /* FeedTableViewController.m */,
+				2B2E9F0E2CCB90C500DFC9ED /* Feed2ProfileTransition.h */,
+				2B2E9F0F2CCB90C500DFC9ED /* Feed2ProfileTransition.m */,
+				2B2E9F112CCB92C300DFC9ED /* FeedSlidingViewController+Transition.h */,
+				2B2E9F122CCB92C300DFC9ED /* FeedSlidingViewController+Transition.m */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -325,11 +335,13 @@
 				2B2E9EFF2CCB6F9700DFC9ED /* FeedSlidingScrollView.m in Sources */,
 				2B2E9EC72CCB6AC100DFC9ED /* ViewController.m in Sources */,
 				2B2E9EC12CCB6AC100DFC9ED /* AppDelegate.m in Sources */,
+				2B2E9F132CCB92C300DFC9ED /* FeedSlidingViewController+Transition.m in Sources */,
 				2B2E9F0C2CCB821900DFC9ED /* TransitionManager.m in Sources */,
 				2B2E9F012CCB6F9700DFC9ED /* FeedSlidingViewController.m in Sources */,
 				2B2E9F002CCB6F9700DFC9ED /* FeedTableViewController.m in Sources */,
 				2B2E9ED22CCB6AC200DFC9ED /* main.m in Sources */,
 				2B2E9F0D2CCB821900DFC9ED /* UINavigationController+Transition.m in Sources */,
+				2B2E9F102CCB90C500DFC9ED /* Feed2ProfileTransition.m in Sources */,
 				2B2E9EC42CCB6AC100DFC9ED /* SceneDelegate.m in Sources */,
 				2B2E9EF82CCB6F8800DFC9ED /* OtherProfileViewController.m in Sources */,
 			);
