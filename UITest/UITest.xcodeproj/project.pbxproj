@@ -124,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				2B2E9F072CCB81CF00DFC9ED /* Transition */,
-				2B2E9EF52CCB6F2500DFC9ED /* Profile */,
 				2B2E9EF42CCB6ED400DFC9ED /* Feed */,
 				2B2E9EBF2CCB6AC100DFC9ED /* AppDelegate.h */,
 				2B2E9EC02CCB6AC100DFC9ED /* AppDelegate.m */,
@@ -162,6 +161,7 @@
 		2B2E9EF42CCB6ED400DFC9ED /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				2B2E9EF52CCB6F2500DFC9ED /* Profile */,
 				2B2E9EFB2CCB6F9700DFC9ED /* FeedSlidingScrollView.h */,
 				2B2E9EF92CCB6F9700DFC9ED /* FeedSlidingScrollView.m */,
 				2B2E9EFA2CCB6F9700DFC9ED /* FeedSlidingViewController.h */,

@@ -6,7 +6,7 @@
 //
 
 #import "OtherProfileViewController.h"
-#import "../Feed/FeedTableViewController.h"
+#import "../FeedTableViewController.h"
 
 
 #define profileHeadHeight 300
@@ -18,8 +18,17 @@
 
 @implementation OtherProfileViewController
 
+- (instancetype)init
+{
+    if (self = [super init]){
+        
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
     self.view.frame = CGRectMake(0, 0, self.navigationController.view.frame.size.width, self.navigationController.view.frame.size.height);
     

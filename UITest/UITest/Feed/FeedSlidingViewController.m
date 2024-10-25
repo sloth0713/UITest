@@ -8,6 +8,7 @@
 #import "FeedSlidingViewController.h"
 #import "FeedSlidingScrollView.h"
 #import "../Transition/TransitionManager.h"
+#import "./Profile/OtherProfileViewController.h"
 
 @interface FeedSlidingViewController ()
 @property (nonatomic, strong) FeedSlidingScrollView *scrolleView;
@@ -16,6 +17,7 @@
 @property (nonatomic, strong) FeedTableViewController *tableVC2;
 @property (nonatomic, strong) FeedTableViewController *tableVC3;
 @property (nonatomic, strong) NSArray <FeedTableViewController *> *tableVCs;
+@property (nonatomic, assign) scrollDirection direction;
 
 @property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
 @end
@@ -53,7 +55,7 @@
     
     [self addPanGesture];
 }
-
+//static BOOL hasPush = NO;
 - (void)addPanGesture
 {
     self.panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
@@ -63,29 +65,34 @@
 }
 
 - (void)handlePanGesture:(UIPanGestureRecognizer *)gestureRecognizer {
-    
-    if (gestureRecognizer.state == UIGestureRecognizerStateChanged) {
+    //即使gestureRecognizerShouldBegin为YES也不一定会走到这里，有可能子ScrollView也返回YES，子view把这个手势拦截了
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded
+        || gestureRecognizer.state == UIGestureRecognizerStateCancelled) {
         CGPoint translation = [gestureRecognizer translationInView:self.view];
-        scrollDirection drection = [TransitionManager directionForPan:gestureRecognizer view:self.view];
-
-        if (drection==scrollDirectionLeft){
-            
+        if (self.direction==scrollDirectionLeft){
+            [self.navigationController pushViewController:[[OtherProfileViewController alloc] init] animated:YES];
+            NSLog(@"pushViewController OtherProfileViewController");
         }
-        
-        [gestureRecognizer setTranslation:CGPointZero inView:self.view];
     }
 }
 
+//[self.navigationController pushViewController:[[OtherProfileViewController alloc] init] animated:YES];
+
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer
 {
-//    if (self.contentOffset.x == self.frame.size.width*2){
-//        scrollDirection direction = [TransitionManager directionForPan:gestureRecognizer view:self];
-//        if (direction == scrollDirectionLeft){
-//            NSLog(@"left");
-//            return NO;
-//        }
-//    }
-    return YES;
+    if (self.currentTableView.isLastVC){
+        scrollDirection drection = [TransitionManager directionForPan:gestureRecognizer view:self.view];
+        if (drection==scrollDirectionLeft){
+            self.direction = drection;
+            return YES;
+        }else{
+            self.direction = scrollDirectionNone;
+            return NO;
+        }
+    }
+    self.direction = scrollDirectionNone;
+    return NO;
+    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -95,9 +102,11 @@
     self.currentTableView = [self.tableVCs objectAtIndex:currentIndex];
     if (self.currentTableView.isLastVC){
         self.scrolleView.isInLastVC = YES;
+    }else{
+        self.scrolleView.isInLastVC = NO;
     }
-    NSLog(@"Current Index is: %ld", currentIndex);
-    NSLog(@"currentTableView is: %@", self.currentTableView.name);
+//    NSLog(@"Current Index is: %ld", currentIndex);
+//    NSLog(@"currentTableView is: %@", self.currentTableView.name);
     
 }
 

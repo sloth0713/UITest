@@ -62,8 +62,7 @@
 //    if (self.isLastVC){
 //        [self leftPanSwitchVC];
 //    }
-    
-    NSLog(@"viewDidLoad");
+
 }
 
 

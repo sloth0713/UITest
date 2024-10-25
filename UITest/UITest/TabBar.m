@@ -16,6 +16,7 @@
         FeedSlidingViewController *feedVC = [[FeedSlidingViewController alloc] init];
         feedVC.view.backgroundColor = [UIColor whiteColor];
         feedVC.tabBarItem.title = @"Feed";
+        UINavigationController *feedNavVC = [[UINavigationController alloc] initWithRootViewController:feedVC];
         
         UIViewController *friendsVC = [[UIViewController alloc] init];
         friendsVC.view.backgroundColor = [UIColor whiteColor];
@@ -28,7 +29,7 @@
         UIViewController *profileVC = [[UIViewController alloc] init];
         profileVC.view.backgroundColor = [UIColor whiteColor];
         profileVC.tabBarItem.title = @"Profile";
-        self.viewControllers = @[feedVC, friendsVC, inboxVC, profileVC];
+        self.viewControllers = @[feedNavVC, friendsVC, inboxVC, profileVC];
     }
     return self;
 }

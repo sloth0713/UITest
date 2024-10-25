@@ -6,7 +6,7 @@
 //
 
 #import "FeedSlidingScrollView.h"
-//#import "../Transition/TransitionManager.h"
+#import "../Transition/TransitionManager.h"
 
 @interface FeedSlidingScrollView()
 
@@ -26,8 +26,15 @@
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer
 {
     //所有的UIScrollView都自带一个panGestureRecognizer，且self.panGestureRecognizer.delegate = self;需要修改，直接重写该方法即可
+    
+    
     if (self.isInLastVC){
-        return NO;
+        scrollDirection drection = [TransitionManager directionForPan:gestureRecognizer view:self];
+        if (drection==scrollDirectionLeft){
+            return NO;
+        }else{
+            return YES;
+        }
     }
     
     return YES;
