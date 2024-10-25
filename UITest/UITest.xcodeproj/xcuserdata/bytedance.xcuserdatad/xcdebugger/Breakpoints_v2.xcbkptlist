@@ -202,8 +202,8 @@
             filePath = "UITest/Feed/Profile/OtherProfileViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
             <Locations>
@@ -265,8 +265,8 @@
             filePath = "UITest/Feed/Profile/OtherProfileViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "-init"
             landmarkType = "7">
          </BreakpointContent>
@@ -395,6 +395,70 @@
                   startingLineNumber = "17"
                   endingLineNumber = "17"
                   offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2A6EAF1-107B-43CE-8624-0254350426DC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Feed/Profile/OtherProfileViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "-handlePanGesture:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "546F7D1E-D7DA-4673-B54F-57FA00CFB223"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Feed/Profile/OtherProfileViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "-handlePanGesture:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "546F7D1E-D7DA-4673-B54F-57FA00CFB223 - cac06cd3ba0a2044"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[OtherProfileViewController handlePanGesture:]"
+                  moduleName = "UITest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/Profile/OtherProfileViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "546F7D1E-D7DA-4673-B54F-57FA00CFB223 - cac06cd3ba0a2044"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[OtherProfileViewController handlePanGesture:]"
+                  moduleName = "UITest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/Profile/OtherProfileViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "296">
                </Location>
             </Locations>
          </BreakpointContent>

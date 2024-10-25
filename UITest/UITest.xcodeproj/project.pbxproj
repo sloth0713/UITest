@@ -25,6 +25,7 @@
 		2B2E9F0D2CCB821900DFC9ED /* UINavigationController+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F0B2CCB821900DFC9ED /* UINavigationController+Transition.m */; };
 		2B2E9F102CCB90C500DFC9ED /* Feed2ProfileTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F0F2CCB90C500DFC9ED /* Feed2ProfileTransition.m */; };
 		2B2E9F132CCB92C300DFC9ED /* FeedSlidingViewController+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F122CCB92C300DFC9ED /* FeedSlidingViewController+Transition.m */; };
+		2B2E9F162CCB97C600DFC9ED /* FullScreenPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F152CCB97C600DFC9ED /* FullScreenPopTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		2B2E9F0F2CCB90C500DFC9ED /* Feed2ProfileTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Feed2ProfileTransition.m; sourceTree = "<group>"; };
 		2B2E9F112CCB92C300DFC9ED /* FeedSlidingViewController+Transition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedSlidingViewController+Transition.h"; sourceTree = "<group>"; };
 		2B2E9F122CCB92C300DFC9ED /* FeedSlidingViewController+Transition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FeedSlidingViewController+Transition.m"; sourceTree = "<group>"; };
+		2B2E9F142CCB97C600DFC9ED /* FullScreenPopTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FullScreenPopTransition.h; sourceTree = "<group>"; };
+		2B2E9F152CCB97C600DFC9ED /* FullScreenPopTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FullScreenPopTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +181,8 @@
 				2B2E9F0F2CCB90C500DFC9ED /* Feed2ProfileTransition.m */,
 				2B2E9F112CCB92C300DFC9ED /* FeedSlidingViewController+Transition.h */,
 				2B2E9F122CCB92C300DFC9ED /* FeedSlidingViewController+Transition.m */,
+				2B2E9F142CCB97C600DFC9ED /* FullScreenPopTransition.h */,
+				2B2E9F152CCB97C600DFC9ED /* FullScreenPopTransition.m */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 				2B2E9F102CCB90C500DFC9ED /* Feed2ProfileTransition.m in Sources */,
 				2B2E9EC42CCB6AC100DFC9ED /* SceneDelegate.m in Sources */,
 				2B2E9EF82CCB6F8800DFC9ED /* OtherProfileViewController.m in Sources */,
+				2B2E9F162CCB97C600DFC9ED /* FullScreenPopTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

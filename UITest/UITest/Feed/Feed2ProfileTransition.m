@@ -11,8 +11,8 @@
 
 - (void)animateTransition:(nonnull id<UIViewControllerContextTransitioning>)transitionContext 
 {
-//    [self animateTransitionLeftPush:transitionContext];
-    [self animateTransitionScale:transitionContext];
+    [self animateTransitionLeftPush:transitionContext];
+//    [self animateTransitionScale:transitionContext];
 }
 
 
@@ -49,7 +49,6 @@
     [containerView addSubview:toVC.view];
 
     NSTimeInterval duration = [self transitionDuration:transitionContext];
-//    duration = 0.011;
 
     toVC.view.transform = CGAffineTransformMakeScale(0.1, 0.1);
     [UIView animateWithDuration:duration
