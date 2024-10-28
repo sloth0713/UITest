@@ -10,9 +10,9 @@
 #import "../Transition/TransitionManager.h"
 #import "./Profile/OtherProfileViewController.h"
 #import "Feed2ProfileTransition.h"
-#import "FeedSlidingViewController+Transition.h"
+#import "../Transition/UINavigationController+Transition.h"
 
-@interface FeedSlidingViewController ()
+@interface FeedSlidingViewController () <UINavigationControllerDelegate>
 @property (nonatomic, strong) FeedSlidingScrollView *scrolleView;
 
 @property (nonatomic, strong) FeedTableViewController *tableVC;
@@ -29,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [UINavigationController hookDelegate];
     self.view.backgroundColor = [UIColor redColor];
     self.scrolleView = [[FeedSlidingScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     self.scrolleView.contentSize = CGSizeMake(self.view.frame.size.width * 3, self.view.frame.size.height);
@@ -80,12 +81,11 @@
 - (void)transition2Profile
 {
  
-    self.navigationController.delegate = self;
+//    self.navigationController.delegate = self;
     [self.navigationController pushViewController:[[OtherProfileViewController alloc] init] animated:YES];
     NSLog(@"pushViewController OtherProfileViewController");
     
 }
-//[self.navigationController pushViewController:[[OtherProfileViewController alloc] init] animated:YES];
 
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer
 {
@@ -126,5 +126,14 @@
 //
 //    targetContentOffset->x = currentPage * pageWidth; // 修改 targetContentOffset 实现自定义滚动位置
 //}
+
+#pragma mark - UINavigationControllerDelegate
+- (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                   animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                fromViewController:(UIViewController *)fromVC
+                                                  toViewController:(UIViewController *)toVC  API_AVAILABLE(ios(7.0))
+{
+    return [[Feed2ProfileTransition alloc] init];
+}
 
 @end

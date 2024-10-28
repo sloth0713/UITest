@@ -24,8 +24,10 @@
 		2B2E9F0C2CCB821900DFC9ED /* TransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F0A2CCB821900DFC9ED /* TransitionManager.m */; };
 		2B2E9F0D2CCB821900DFC9ED /* UINavigationController+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F0B2CCB821900DFC9ED /* UINavigationController+Transition.m */; };
 		2B2E9F102CCB90C500DFC9ED /* Feed2ProfileTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F0F2CCB90C500DFC9ED /* Feed2ProfileTransition.m */; };
-		2B2E9F132CCB92C300DFC9ED /* FeedSlidingViewController+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F122CCB92C300DFC9ED /* FeedSlidingViewController+Transition.m */; };
 		2B2E9F162CCB97C600DFC9ED /* FullScreenPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F152CCB97C600DFC9ED /* FullScreenPopTransition.m */; };
+		2B2E9F192CCF3E3A00DFC9ED /* DefaultTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F182CCF3E3A00DFC9ED /* DefaultTransitionDelegate.m */; };
+		2B2E9F1C2CCF3F0400DFC9ED /* DefaultPushTransiotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F1B2CCF3F0400DFC9ED /* DefaultPushTransiotion.m */; };
+		2B2E9F1F2CCF63B100DFC9ED /* DefaultPopTransiotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F1E2CCF63B100DFC9ED /* DefaultPopTransiotion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,10 +80,14 @@
 		2B2E9F0B2CCB821900DFC9ED /* UINavigationController+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Transition.m"; sourceTree = "<group>"; };
 		2B2E9F0E2CCB90C500DFC9ED /* Feed2ProfileTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Feed2ProfileTransition.h; sourceTree = "<group>"; };
 		2B2E9F0F2CCB90C500DFC9ED /* Feed2ProfileTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Feed2ProfileTransition.m; sourceTree = "<group>"; };
-		2B2E9F112CCB92C300DFC9ED /* FeedSlidingViewController+Transition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedSlidingViewController+Transition.h"; sourceTree = "<group>"; };
-		2B2E9F122CCB92C300DFC9ED /* FeedSlidingViewController+Transition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FeedSlidingViewController+Transition.m"; sourceTree = "<group>"; };
 		2B2E9F142CCB97C600DFC9ED /* FullScreenPopTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FullScreenPopTransition.h; sourceTree = "<group>"; };
 		2B2E9F152CCB97C600DFC9ED /* FullScreenPopTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FullScreenPopTransition.m; sourceTree = "<group>"; };
+		2B2E9F172CCF3E3A00DFC9ED /* DefaultTransitionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultTransitionDelegate.h; sourceTree = "<group>"; };
+		2B2E9F182CCF3E3A00DFC9ED /* DefaultTransitionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultTransitionDelegate.m; sourceTree = "<group>"; };
+		2B2E9F1A2CCF3F0400DFC9ED /* DefaultPushTransiotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultPushTransiotion.h; sourceTree = "<group>"; };
+		2B2E9F1B2CCF3F0400DFC9ED /* DefaultPushTransiotion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultPushTransiotion.m; sourceTree = "<group>"; };
+		2B2E9F1D2CCF63B100DFC9ED /* DefaultPopTransiotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultPopTransiotion.h; sourceTree = "<group>"; };
+		2B2E9F1E2CCF63B100DFC9ED /* DefaultPopTransiotion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultPopTransiotion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,8 +185,6 @@
 				2B2E9EFC2CCB6F9700DFC9ED /* FeedTableViewController.m */,
 				2B2E9F0E2CCB90C500DFC9ED /* Feed2ProfileTransition.h */,
 				2B2E9F0F2CCB90C500DFC9ED /* Feed2ProfileTransition.m */,
-				2B2E9F112CCB92C300DFC9ED /* FeedSlidingViewController+Transition.h */,
-				2B2E9F122CCB92C300DFC9ED /* FeedSlidingViewController+Transition.m */,
 				2B2E9F142CCB97C600DFC9ED /* FullScreenPopTransition.h */,
 				2B2E9F152CCB97C600DFC9ED /* FullScreenPopTransition.m */,
 			);
@@ -203,6 +207,12 @@
 				2B2E9F0A2CCB821900DFC9ED /* TransitionManager.m */,
 				2B2E9F082CCB821900DFC9ED /* UINavigationController+Transition.h */,
 				2B2E9F0B2CCB821900DFC9ED /* UINavigationController+Transition.m */,
+				2B2E9F172CCF3E3A00DFC9ED /* DefaultTransitionDelegate.h */,
+				2B2E9F182CCF3E3A00DFC9ED /* DefaultTransitionDelegate.m */,
+				2B2E9F1A2CCF3F0400DFC9ED /* DefaultPushTransiotion.h */,
+				2B2E9F1B2CCF3F0400DFC9ED /* DefaultPushTransiotion.m */,
+				2B2E9F1D2CCF63B100DFC9ED /* DefaultPopTransiotion.h */,
+				2B2E9F1E2CCF63B100DFC9ED /* DefaultPopTransiotion.m */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -336,11 +346,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B2E9F1F2CCF63B100DFC9ED /* DefaultPopTransiotion.m in Sources */,
 				2B2E9F062CCB6FE100DFC9ED /* TabBar.m in Sources */,
+				2B2E9F192CCF3E3A00DFC9ED /* DefaultTransitionDelegate.m in Sources */,
+				2B2E9F1C2CCF3F0400DFC9ED /* DefaultPushTransiotion.m in Sources */,
 				2B2E9EFF2CCB6F9700DFC9ED /* FeedSlidingScrollView.m in Sources */,
 				2B2E9EC72CCB6AC100DFC9ED /* ViewController.m in Sources */,
 				2B2E9EC12CCB6AC100DFC9ED /* AppDelegate.m in Sources */,
-				2B2E9F132CCB92C300DFC9ED /* FeedSlidingViewController+Transition.m in Sources */,
 				2B2E9F0C2CCB821900DFC9ED /* TransitionManager.m in Sources */,
 				2B2E9F012CCB6F9700DFC9ED /* FeedSlidingViewController.m in Sources */,
 				2B2E9F002CCB6F9700DFC9ED /* FeedTableViewController.m in Sources */,

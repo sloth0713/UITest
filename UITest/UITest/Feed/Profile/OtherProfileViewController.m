@@ -63,7 +63,7 @@
 
 - (void)transition2Feed
 {
-    self.navigationController.delegate = self;
+//    self.navigationController.delegate = self;
     [self.navigationController popViewControllerAnimated:YES];
     NSLog(@"pushViewController OtherProfileViewController");
     
