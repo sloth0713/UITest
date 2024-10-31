@@ -7,6 +7,7 @@
 
 #import "TabBar.h"
 #import "Feed/FeedSlidingViewController.h"
+#import "Friends/FriendsVC.h"
 
 @implementation TabBar
 
@@ -18,7 +19,7 @@
         feedVC.tabBarItem.title = @"Feed";
         UINavigationController *feedNavVC = [[UINavigationController alloc] initWithRootViewController:feedVC];
         
-        UIViewController *friendsVC = [[UIViewController alloc] init];
+        FriendsVC *friendsVC = [[FriendsVC alloc] init];
         friendsVC.view.backgroundColor = [UIColor whiteColor];
         friendsVC.tabBarItem.title = @"Friends";
         
