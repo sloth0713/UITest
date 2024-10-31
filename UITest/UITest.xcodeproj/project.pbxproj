@@ -28,6 +28,8 @@
 		2B2E9F192CCF3E3A00DFC9ED /* DefaultTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F182CCF3E3A00DFC9ED /* DefaultTransitionDelegate.m */; };
 		2B2E9F1C2CCF3F0400DFC9ED /* DefaultPushTransiotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F1B2CCF3F0400DFC9ED /* DefaultPushTransiotion.m */; };
 		2B2E9F1F2CCF63B100DFC9ED /* DefaultPopTransiotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F1E2CCF63B100DFC9ED /* DefaultPopTransiotion.m */; };
+		2BE5E3982CD357E700651685 /* UIGestureRecognizer+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5E3972CD357E700651685 /* UIGestureRecognizer+Test.m */; };
+		2BE5E39F2CD3617100651685 /* ProfileMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5E39E2CD3617100651685 /* ProfileMaskView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,10 @@
 		2B2E9F1B2CCF3F0400DFC9ED /* DefaultPushTransiotion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultPushTransiotion.m; sourceTree = "<group>"; };
 		2B2E9F1D2CCF63B100DFC9ED /* DefaultPopTransiotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultPopTransiotion.h; sourceTree = "<group>"; };
 		2B2E9F1E2CCF63B100DFC9ED /* DefaultPopTransiotion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultPopTransiotion.m; sourceTree = "<group>"; };
+		2BE5E3962CD357E700651685 /* UIGestureRecognizer+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Test.h"; sourceTree = "<group>"; };
+		2BE5E3972CD357E700651685 /* UIGestureRecognizer+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Test.m"; sourceTree = "<group>"; };
+		2BE5E39D2CD3617100651685 /* ProfileMaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileMaskView.h; sourceTree = "<group>"; };
+		2BE5E39E2CD3617100651685 /* ProfileMaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileMaskView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +202,8 @@
 			children = (
 				2B2E9EF72CCB6F8800DFC9ED /* OtherProfileViewController.h */,
 				2B2E9EF62CCB6F8800DFC9ED /* OtherProfileViewController.m */,
+				2BE5E39D2CD3617100651685 /* ProfileMaskView.h */,
+				2BE5E39E2CD3617100651685 /* ProfileMaskView.m */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -213,6 +221,8 @@
 				2B2E9F1B2CCF3F0400DFC9ED /* DefaultPushTransiotion.m */,
 				2B2E9F1D2CCF63B100DFC9ED /* DefaultPopTransiotion.h */,
 				2B2E9F1E2CCF63B100DFC9ED /* DefaultPopTransiotion.m */,
+				2BE5E3962CD357E700651685 /* UIGestureRecognizer+Test.h */,
+				2BE5E3972CD357E700651685 /* UIGestureRecognizer+Test.m */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -351,6 +361,7 @@
 				2B2E9F192CCF3E3A00DFC9ED /* DefaultTransitionDelegate.m in Sources */,
 				2B2E9F1C2CCF3F0400DFC9ED /* DefaultPushTransiotion.m in Sources */,
 				2B2E9EFF2CCB6F9700DFC9ED /* FeedSlidingScrollView.m in Sources */,
+				2BE5E3982CD357E700651685 /* UIGestureRecognizer+Test.m in Sources */,
 				2B2E9EC72CCB6AC100DFC9ED /* ViewController.m in Sources */,
 				2B2E9EC12CCB6AC100DFC9ED /* AppDelegate.m in Sources */,
 				2B2E9F0C2CCB821900DFC9ED /* TransitionManager.m in Sources */,
@@ -361,6 +372,7 @@
 				2B2E9F102CCB90C500DFC9ED /* Feed2ProfileTransition.m in Sources */,
 				2B2E9EC42CCB6AC100DFC9ED /* SceneDelegate.m in Sources */,
 				2B2E9EF82CCB6F8800DFC9ED /* OtherProfileViewController.m in Sources */,
+				2BE5E39F2CD3617100651685 /* ProfileMaskView.m in Sources */,
 				2B2E9F162CCB97C600DFC9ED /* FullScreenPopTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

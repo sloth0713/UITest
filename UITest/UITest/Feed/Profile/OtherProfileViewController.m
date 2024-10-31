@@ -9,6 +9,7 @@
 #import "../FeedTableViewController.h"
 #import "../../Transition/TransitionManager.h"
 #import "../FullScreenPopTransition.h"
+#import "ProfileMaskView.h"
 
 
 #define profileHeadHeight 300
@@ -17,6 +18,8 @@
 @property (nonatomic, strong) FeedTableViewController *tableVC;
 @property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
 @property (nonatomic, assign) scrollDirection direction;
+
+@property (nonatomic, strong) ProfileMaskView *maskView;
 
 @end
 
@@ -39,7 +42,10 @@
     self.tableVC = [[FeedTableViewController alloc] initWithName:@"tableVC"];
     [self addChildViewController:self.tableVC];
     self.tableVC.view.frame = CGRectMake(0, profileHeadHeight, self.view.frame.size.width, self.view.frame.size.height - profileHeadHeight);
-    [self.view addSubview:self.tableVC.view];
+    
+    self.maskView = [[ProfileMaskView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:self.maskView];
+//    [self.view addSubview:self.tableVC.view];
     [self addPanGesture];
 }
 
@@ -67,6 +73,11 @@
     [self.navigationController popViewControllerAnimated:YES];
     NSLog(@"pushViewController OtherProfileViewController");
     
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer
