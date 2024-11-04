@@ -12,7 +12,7 @@
 
 - (void)viewDidLoad
 {
-    TestTouchView *viewA = [[TestTouchView alloc] initWithFrame:self.view.frame name:@"viewA"];
+    TestTouchView *viewA = [[TestTouchView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-100) name:@"viewA"];
     viewA.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:viewA];
     

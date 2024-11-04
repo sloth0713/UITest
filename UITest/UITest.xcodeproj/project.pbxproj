@@ -150,6 +150,7 @@
 		2B2E9EBE2CCB6AC100DFC9ED /* UITest */ = {
 			isa = PBXGroup;
 			children = (
+				2BB793112CD871460056DBB9 /* Tab */,
 				2BF063812CD3892A00A2B3F1 /* Friends */,
 				2B2E9F072CCB81CF00DFC9ED /* Transition */,
 				2B2E9EF42CCB6ED400DFC9ED /* Feed */,
@@ -163,8 +164,6 @@
 				2B2E9ECD2CCB6AC200DFC9ED /* LaunchScreen.storyboard */,
 				2B2E9ED02CCB6AC200DFC9ED /* Info.plist */,
 				2B2E9ED12CCB6AC200DFC9ED /* main.m */,
-				2B2E9F042CCB6FE100DFC9ED /* TabBar.h */,
-				2B2E9F052CCB6FE100DFC9ED /* TabBar.m */,
 			);
 			path = UITest;
 			sourceTree = "<group>";
@@ -232,6 +231,15 @@
 				2BE5E3972CD357E700651685 /* UIGestureRecognizer+Test.m */,
 			);
 			path = Transition;
+			sourceTree = "<group>";
+		};
+		2BB793112CD871460056DBB9 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				2B2E9F042CCB6FE100DFC9ED /* TabBar.h */,
+				2B2E9F052CCB6FE100DFC9ED /* TabBar.m */,
+			);
+			path = Tab;
 			sourceTree = "<group>";
 		};
 		2BF063812CD3892A00A2B3F1 /* Friends */ = {

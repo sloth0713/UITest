@@ -37,9 +37,9 @@
 
 - (BOOL)pointInside:(CGPoint)point withEvent:(nullable UIEvent *)event
 {
-    NSLog(@"%@_view--- pointInside withEvent ---", self.name);
+    NSLog(@"%@_view--- pointInside start withEvent ---", self.name);
     BOOL isInside = [super pointInside:point withEvent:event];
-    NSLog(@"%@_view--- pointInside withEvent --- isInside:%d", self.name,isInside);
+    NSLog(@"%@_view--- pointInside end withEvent --- isInside:%d", self.name,isInside);
     return isInside;
 }
 

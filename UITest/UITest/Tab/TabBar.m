@@ -6,8 +6,8 @@
 //
 
 #import "TabBar.h"
-#import "Feed/FeedSlidingViewController.h"
-#import "Friends/FriendsVC.h"
+#import "../Feed/FeedSlidingViewController.h"
+#import "../Friends/FriendsVC.h"
 
 @implementation TabBar
 
@@ -16,8 +16,8 @@
     if (self = [super init]){
         FeedSlidingViewController *feedVC = [[FeedSlidingViewController alloc] init];
         feedVC.view.backgroundColor = [UIColor whiteColor];
-        feedVC.tabBarItem.title = @"Feed";
         UINavigationController *feedNavVC = [[UINavigationController alloc] initWithRootViewController:feedVC];
+        feedNavVC.tabBarItem.title = @"Feed";
         
         FriendsVC *friendsVC = [[FriendsVC alloc] init];
         friendsVC.view.backgroundColor = [UIColor whiteColor];
@@ -30,9 +30,31 @@
         UIViewController *profileVC = [[UIViewController alloc] init];
         profileVC.view.backgroundColor = [UIColor whiteColor];
         profileVC.tabBarItem.title = @"Profile";
+        
+        [self setTabAppearance];
+        
         self.viewControllers = @[feedNavVC, friendsVC, inboxVC, profileVC];
     }
     return self;
+}
+
+- (void)setTabAppearance
+{
+    UIFont *font = [UIFont systemFontOfSize:16.0];
+    NSDictionary *attributesNormal = @{
+        NSFontAttributeName:font,
+        NSForegroundColorAttributeName:[UIColor yellowColor]
+    };
+    
+    NSDictionary *attributesSelected = @{
+        NSFontAttributeName:font,
+        NSForegroundColorAttributeName:[UIColor redColor]
+    };
+
+    [[UITabBarItem appearance] setTitleTextAttributes:attributesNormal forState:UIControlStateNormal];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:attributesSelected forState:UIControlStateSelected];
+    
 }
 
 @end
