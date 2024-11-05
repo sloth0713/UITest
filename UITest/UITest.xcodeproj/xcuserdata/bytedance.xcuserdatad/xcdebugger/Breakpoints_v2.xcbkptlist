@@ -886,28 +886,28 @@
             filePath = "UITest/Friends/FriendsVC.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "-textFieldDidBeginEditing:"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "2231503F-30B4-4347-BDBC-63DDDC38DB97 - eb594ae86dc9219"
+                  uuid = "2231503F-30B4-4347-BDBC-63DDDC38DB97 - 61f05294c17415c2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__38-[FriendsVC textFieldDidBeginEditing:]_block_invoke"
+                  symbolName = "-[FriendsVC keyboardWillShow:]"
                   moduleName = "UITest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Friends/FriendsVC.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "32">
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "60">
                </Location>
                <Location
-                  uuid = "2231503F-30B4-4347-BDBC-63DDDC38DB97 - 6b654783102009cc"
+                  uuid = "2231503F-30B4-4347-BDBC-63DDDC38DB97 - 6b654783102008a5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -917,24 +917,73 @@
                   urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Friends/FriendsVC.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
                   offsetFromSymbolStart = "76">
                </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E47A27E3-7D53-4C1F-AE4B-52ECE92AFBC6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Friends/FriendsVC.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "-keyboardWillShow:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8804CC7-95F7-46C6-BFB0-1E4F35CCD2C8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Friends/FriendsVC.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-keyboardDidShow:"
+            landmarkType = "7">
+            <Locations>
                <Location
-                  uuid = "2231503F-30B4-4347-BDBC-63DDDC38DB97 - eb594ae86dc925b"
+                  uuid = "D8804CC7-95F7-46C6-BFB0-1E4F35CCD2C8 - 25f4d233e8277e32"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__38-[FriendsVC textFieldDidBeginEditing:]_block_invoke"
+                  symbolName = "-[FriendsVC hideKeyboard:]"
                   moduleName = "UITest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Friends/FriendsVC.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "20">
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "D8804CC7-95F7-46C6-BFB0-1E4F35CCD2C8 - 63a16125796ffe5a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[FriendsVC keyboardDidShow:]"
+                  moduleName = "UITest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Friends/FriendsVC.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "232">
                </Location>
             </Locations>
          </BreakpointContent>

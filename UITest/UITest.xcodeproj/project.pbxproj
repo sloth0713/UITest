@@ -29,6 +29,7 @@
 		2B2E9F1C2CCF3F0400DFC9ED /* DefaultPushTransiotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F1B2CCF3F0400DFC9ED /* DefaultPushTransiotion.m */; };
 		2B2E9F1F2CCF63B100DFC9ED /* DefaultPopTransiotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F1E2CCF63B100DFC9ED /* DefaultPopTransiotion.m */; };
 		2BB78ECA2CD38DCA0056DBB9 /* TestTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB78EC92CD38DCA0056DBB9 /* TestTouchView.m */; };
+		2BB793172CD8C5F70056DBB9 /* UIInputViewAnimationStyle+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB793162CD8C5F70056DBB9 /* UIInputViewAnimationStyle+hook.m */; };
 		2BE5E3982CD357E700651685 /* UIGestureRecognizer+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5E3972CD357E700651685 /* UIGestureRecognizer+Test.m */; };
 		2BE5E39F2CD3617100651685 /* ProfileMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5E39E2CD3617100651685 /* ProfileMaskView.m */; };
 		2BF063842CD3896B00A2B3F1 /* FriendsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF063832CD3896B00A2B3F1 /* FriendsVC.m */; };
@@ -94,6 +95,8 @@
 		2B2E9F1E2CCF63B100DFC9ED /* DefaultPopTransiotion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultPopTransiotion.m; sourceTree = "<group>"; };
 		2BB78EC82CD38DCA0056DBB9 /* TestTouchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTouchView.h; sourceTree = "<group>"; };
 		2BB78EC92CD38DCA0056DBB9 /* TestTouchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTouchView.m; sourceTree = "<group>"; };
+		2BB793152CD8C5F70056DBB9 /* UIInputViewAnimationStyle+hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIInputViewAnimationStyle+hook.h"; sourceTree = "<group>"; };
+		2BB793162CD8C5F70056DBB9 /* UIInputViewAnimationStyle+hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIInputViewAnimationStyle+hook.m"; sourceTree = "<group>"; };
 		2BE5E3962CD357E700651685 /* UIGestureRecognizer+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Test.h"; sourceTree = "<group>"; };
 		2BE5E3972CD357E700651685 /* UIGestureRecognizer+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Test.m"; sourceTree = "<group>"; };
 		2BE5E39D2CD3617100651685 /* ProfileMaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileMaskView.h; sourceTree = "<group>"; };
@@ -249,6 +252,8 @@
 				2BF063832CD3896B00A2B3F1 /* FriendsVC.m */,
 				2BB78EC82CD38DCA0056DBB9 /* TestTouchView.h */,
 				2BB78EC92CD38DCA0056DBB9 /* TestTouchView.m */,
+				2BB793152CD8C5F70056DBB9 /* UIInputViewAnimationStyle+hook.h */,
+				2BB793162CD8C5F70056DBB9 /* UIInputViewAnimationStyle+hook.m */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B2E9F1F2CCF63B100DFC9ED /* DefaultPopTransiotion.m in Sources */,
+				2BB793172CD8C5F70056DBB9 /* UIInputViewAnimationStyle+hook.m in Sources */,
 				2B2E9F062CCB6FE100DFC9ED /* TabBar.m in Sources */,
 				2B2E9F192CCF3E3A00DFC9ED /* DefaultTransitionDelegate.m in Sources */,
 				2B2E9F1C2CCF3F0400DFC9ED /* DefaultPushTransiotion.m in Sources */,

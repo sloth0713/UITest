@@ -71,17 +71,20 @@
                                                  selector:@selector(keyboardWillShow:)
                                                      name:UIKeyboardWillShowNotification
                                                    object:nil];
-        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardDidShow:)
+                                                     name:UIKeyboardDidShowNotification
+                                                   object:nil];
     }
     return _textField;
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField 
 {
-
+    NSLog(@"textFieldDidBeginEditing");
 }
 
-- (void)keyboardWillShow:(NSNotification *)notification 
+- (void)keyboardWillShow:(NSNotification *)notification
 {
     NSDictionary *userInfo = [notification userInfo];
     CGRect keyboardFrame = [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
@@ -89,7 +92,13 @@
     NSLog(@"keyboardWillShow notification : %@",userInfo);
 }
 
-
+- (void)keyboardDidShow:(NSNotification *)notification
+{
+    NSDictionary *userInfo = [notification userInfo];
+    CGRect keyboardFrame = [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    NSTimeInterval animationDuration = [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    NSLog(@"keyboardDidShow notification : %@",userInfo);
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
