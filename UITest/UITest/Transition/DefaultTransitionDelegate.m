@@ -8,6 +8,7 @@
 #import "DefaultTransitionDelegate.h"
 #import "DefaultPopTransiotion.h"
 #import "DefaultPushTransiotion.h"
+#import "../../UITest/Responder.h"
 
 @implementation TransitionContext
 @end
@@ -28,6 +29,8 @@
                                                 fromViewController:(UIViewController *)fromVC
                                                   toViewController:(UIViewController *)toVC  API_AVAILABLE(ios(7.0))
 {
+    //判断topvc
+    Responder.shareInstance.topVC = toVC;
     switch (self.context.type) {
         case TransitionTypePush:
             return [[DefaultPushTransiotion alloc] init];

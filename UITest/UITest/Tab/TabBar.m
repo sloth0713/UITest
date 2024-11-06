@@ -8,6 +8,7 @@
 #import "TabBar.h"
 #import "../Feed/FeedSlidingViewController.h"
 #import "../Friends/FriendsVC.h"
+#import "../Responder.h"
 
 @implementation TabBar
 
@@ -17,6 +18,7 @@
         FeedSlidingViewController *feedVC = [[FeedSlidingViewController alloc] init];
         feedVC.view.backgroundColor = [UIColor whiteColor];
         UINavigationController *feedNavVC = [[UINavigationController alloc] initWithRootViewController:feedVC];
+        Responder.shareInstance.topVC = feedVC;
         feedNavVC.tabBarItem.title = @"Feed";
         
         FriendsVC *friendsVC = [[FriendsVC alloc] init];

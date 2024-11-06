@@ -7,6 +7,8 @@
 
 #import "FeedTableViewController.h"
 #import "../Transition/TransitionManager.h"
+#import "./Profile/OtherProfileViewController.h"
+#import "../../UITest/Responder.h"
 
 #define cellCount 20
 
@@ -58,31 +60,11 @@
     //decelerationRate在tableView中是禁用的
     self.tableView.decelerationRate = 0.0001;
     [self.view addSubview:self.tableView];
-    
-//    if (self.isLastVC){
-//        [self leftPanSwitchVC];
-//    }
-
 }
 
-
-- (void)leftPanSwitchVC
-{
-    self.panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
-    [self.view addGestureRecognizer:self.panGestureRecognizer];
-    
-}
-
-- (void)handlePanGesture:(UIPanGestureRecognizer *)gestureRecognizer {
-    if (gestureRecognizer.state == UIGestureRecognizerStateChanged) {
-        CGPoint translation = [gestureRecognizer translationInView:self.view];
-//        scrollDirection drection = [TransitionManager getDirection:translation];
-//        
-//        if (drection==scrollDirectionLeft){
-//        }
-        
-        [gestureRecognizer setTranslation:CGPointZero inView:self.view];
-    }
+- (void)buttonClicked:(UIButton *)sender {
+    NSLog(@"Button clicked!");
+    [Responder.shareInstance.topVC.navigationController pushViewController:[[OtherProfileViewController alloc] init] animated:YES];
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath { 
@@ -92,6 +74,13 @@
     
     long row = indexPath.row%3;
     UIColor *color = colorArray[row];
+    if (self.isLastVC){
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+        button.backgroundColor = [UIColor blackColor];
+        [button setTitle:@"Profile" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.contentView addSubview:button];
+    }
 
     cell.contentView.backgroundColor = color;
     cell.textLabel.text = [NSString stringWithFormat:@"%@ : %ld",self.name,indexPath.row];
