@@ -857,8 +857,8 @@
             filePath = "UITest/Transition/DefaultPushTransiotion.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "-animateTransitionLeftPush:"
             landmarkType = "7">
          </BreakpointContent>
@@ -941,6 +941,54 @@
             endingLineNumber = "17"
             landmarkName = "+hookDelegate"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "068F8DE6-38E8-4B6A-9554-7BA53DEA1A77"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Transition/DefaultPushTransiotion.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-animateTransitionLeftPush:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "068F8DE6-38E8-4B6A-9554-7BA53DEA1A77 - 6a8596e0c4ef1e82"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DefaultPushTransiotion animateTransitionLeftPush:]"
+                  moduleName = "UITest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Transition/DefaultPushTransiotion.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "496">
+               </Location>
+               <Location
+                  uuid = "068F8DE6-38E8-4B6A-9554-7BA53DEA1A77 - 5537e278b2d6f857"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__52-[DefaultPushTransiotion animateTransitionLeftPush:]_block_invoke"
+                  moduleName = "UITest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Transition/DefaultPushTransiotion.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
