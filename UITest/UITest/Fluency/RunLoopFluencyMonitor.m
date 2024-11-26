@@ -64,8 +64,8 @@
                     self.runLoopActivity = 0;
                     return;
                 }
-                NSLog(@"runloop activity time out");
-                stringFromActivity(self.runLoopActivity);
+//                NSLog(@"runloop activity time out");
+//                stringFromActivity(self.runLoopActivity);
                 //两个runloop的状态，BeforeSources和AfterWaiting这两个状态区间时间能够检测到是否卡顿
                 
                 // 正常是kCFRunLoopBeforeWaiting，线程停止就是kCFRunLoopBeforeSources
@@ -83,7 +83,7 @@
                 NSLog(@"not time out");
             }
             self.timeoutCount = 0;
-        }// end while
+        }
     });
     
 }

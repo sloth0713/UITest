@@ -53,7 +53,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self.textField becomeFirstResponder];
+//    [self.textField becomeFirstResponder];//弹出键盘
 }
 
 - (UITextField *)textField
