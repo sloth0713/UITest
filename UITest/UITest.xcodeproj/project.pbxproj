@@ -30,6 +30,7 @@
 		2B2E9F1F2CCF63B100DFC9ED /* DefaultPopTransiotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F1E2CCF63B100DFC9ED /* DefaultPopTransiotion.m */; };
 		2BB1158A2CF59B5C008F6D40 /* InboxVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB115892CF59B5C008F6D40 /* InboxVC.m */; };
 		2BB1158E2CF5BD03008F6D40 /* RunLoopFluencyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1158D2CF5BD03008F6D40 /* RunLoopFluencyMonitor.m */; };
+		2BB115912CF5CE43008F6D40 /* DisplayLinkFluencyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB115902CF5CE43008F6D40 /* DisplayLinkFluencyMonitor.m */; };
 		2BB78ECA2CD38DCA0056DBB9 /* TestTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB78EC92CD38DCA0056DBB9 /* TestTouchView.m */; };
 		2BB797FD2CDA23280056DBB9 /* Responder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB797FC2CDA23280056DBB9 /* Responder.m */; };
 		2BE5E3982CD357E700651685 /* UIGestureRecognizer+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5E3972CD357E700651685 /* UIGestureRecognizer+Test.m */; };
@@ -99,6 +100,8 @@
 		2BB115892CF59B5C008F6D40 /* InboxVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InboxVC.m; sourceTree = "<group>"; };
 		2BB1158C2CF5BD03008F6D40 /* RunLoopFluencyMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopFluencyMonitor.h; sourceTree = "<group>"; };
 		2BB1158D2CF5BD03008F6D40 /* RunLoopFluencyMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopFluencyMonitor.m; sourceTree = "<group>"; };
+		2BB1158F2CF5CE43008F6D40 /* DisplayLinkFluencyMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayLinkFluencyMonitor.h; sourceTree = "<group>"; };
+		2BB115902CF5CE43008F6D40 /* DisplayLinkFluencyMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayLinkFluencyMonitor.m; sourceTree = "<group>"; };
 		2BB78EC82CD38DCA0056DBB9 /* TestTouchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTouchView.h; sourceTree = "<group>"; };
 		2BB78EC92CD38DCA0056DBB9 /* TestTouchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTouchView.m; sourceTree = "<group>"; };
 		2BB797FB2CDA23280056DBB9 /* Responder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Responder.h; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 			children = (
 				2BB1158C2CF5BD03008F6D40 /* RunLoopFluencyMonitor.h */,
 				2BB1158D2CF5BD03008F6D40 /* RunLoopFluencyMonitor.m */,
+				2BB1158F2CF5CE43008F6D40 /* DisplayLinkFluencyMonitor.h */,
+				2BB115902CF5CE43008F6D40 /* DisplayLinkFluencyMonitor.m */,
 			);
 			path = Fluency;
 			sourceTree = "<group>";
@@ -421,6 +426,7 @@
 				2B2E9F1C2CCF3F0400DFC9ED /* DefaultPushTransiotion.m in Sources */,
 				2B2E9EFF2CCB6F9700DFC9ED /* FeedSlidingScrollView.m in Sources */,
 				2BE5E3982CD357E700651685 /* UIGestureRecognizer+Test.m in Sources */,
+				2BB115912CF5CE43008F6D40 /* DisplayLinkFluencyMonitor.m in Sources */,
 				2BB1158E2CF5BD03008F6D40 /* RunLoopFluencyMonitor.m in Sources */,
 				2BF063842CD3896B00A2B3F1 /* FriendsVC.m in Sources */,
 				2B2E9EC72CCB6AC100DFC9ED /* ViewController.m in Sources */,

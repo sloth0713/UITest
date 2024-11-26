@@ -26,17 +26,38 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, self.view.bounds.size.height-200)];
-//    bgView.backgroundColor = [UIColor greenColor];
-//    [self.view addSubview:bgView];
+    
+    [self addDispalayLinkAnimationView];
+    [self addCoreAnimationView];
+    [self addCoreAnimationUIView];
+    
+}
+
+- (void)addDispalayLinkAnimationView
+{
+    self.displayLinkAnimatedView = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    self.displayLinkAnimatedView.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:self.displayLinkAnimatedView];
+    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(handleDisplayLink:)];
+    [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+}
+
+- (void)addCoreAnimationView
+{
+    self.coreAnimatedView = [[UIView alloc] initWithFrame:CGRectMake(100, 300, 100, 100)];
+    self.coreAnimatedView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:self.coreAnimatedView];
+}
+
+- (void)addCoreAnimationUIView
+{
     self.coreAnimatedUIView = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.coreAnimatedUIView.frame = CGRectMake(100, 400, 100, 100);
     self.coreAnimatedUIView.backgroundColor = [UIColor greenColor];
     [self.coreAnimatedUIView addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.coreAnimatedUIView];
-    
-    
 }
+
+
 - (void)buttonClicked:sender
 {
     //模拟kCFRunLoopBeforeSources的卡顿
@@ -45,24 +66,18 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [self addDispalayLinkAnimationView];
-//        [self addCoreAnimationView];
-//        [self addCoreAnimationUIView];
-    });
+    [self startDispalayLinkAnimationView];
+    [self startCoreAnimationView];
+    [self startCoreAnimationUIView];
 }
 
-- (void)addCoreAnimationView
+- (void)startCoreAnimationView
 {
-    self.coreAnimatedView = [[UIView alloc] initWithFrame:CGRectMake(100, 300, 100, 100)];
-    self.coreAnimatedView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:self.coreAnimatedView];
-    
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
     animation.fromValue = [NSValue valueWithCGPoint:self.coreAnimatedView.layer.position];
     
     CGPoint toPosition = self.coreAnimatedView.layer.position;
-    toPosition.x += 100; // 移动到右侧100像素
+    toPosition.x += 200; // 移动到右侧
     animation.toValue = [NSValue valueWithCGPoint:toPosition];
     
     animation.duration = 2.0;
@@ -73,14 +88,15 @@
     
 }
 
-- (void)addCoreAnimationUIView
+- (void)startCoreAnimationUIView
 {
+    self.coreAnimatedUIView.frame = CGRectMake(100, 400, 100, 100);
     [UIView animateWithDuration:2.0
                           delay:0.0
                         options:UIViewAnimationOptionCurveLinear | UIViewAnimationOptionRepeat
                      animations:^{
                          CGRect frame = self.coreAnimatedUIView.frame;
-                         frame.origin.x = 300;
+                         frame.origin.x = 200;
                          self.coreAnimatedUIView.frame = frame;
                      }
                      completion:^(BOOL finished) {
@@ -94,16 +110,9 @@
 }
 
 
-- (void)addDispalayLinkAnimationView
+- (void)startDispalayLinkAnimationView
 {
     self.angle = 0.0;
-    
-    self.displayLinkAnimatedView = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
-    self.displayLinkAnimatedView.backgroundColor = [UIColor blueColor];
-    [self.view addSubview:self.displayLinkAnimatedView];
-    
-    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(handleDisplayLink:)];
-    [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 }
 
 - (void)handleDisplayLink:(CADisplayLink *)displayLink

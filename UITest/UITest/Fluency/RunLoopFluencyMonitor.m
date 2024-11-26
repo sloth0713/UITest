@@ -80,7 +80,7 @@
                     });
                 } //这里不需要考虑连续三次刚好不同的runloop kCFRunLoopBeforeSources的case，因为runloop activity是按照顺序来的，如果其他activity超时会不走continue设0，如果不超时会semaphoreWait为0，也还是会设置为0
             }else{
-                NSLog(@"not time out");
+//                NSLog(@"not time out");
             }
             self.timeoutCount = 0;
         }
@@ -96,7 +96,7 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActi
     
     dispatch_semaphore_t semaphore = lagMonitor.dispatchSemaphore;
     dispatch_semaphore_signal(semaphore);
-    stringFromActivity(activity);
+//    stringFromActivity(activity);
 }
 
 - (void)log
