@@ -34,68 +34,6 @@
             endingLineNumber = "72"
             landmarkName = "-handlePanGesture:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "D2967F1D-BCCB-4FE3-8A9D-4E9C04F6D23A - 63d126f316b188a7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[FeedSlidingViewController handlePanGesture:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/Feed/FeedSlidingViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "124">
-               </Location>
-               <Location
-                  uuid = "D2967F1D-BCCB-4FE3-8A9D-4E9C04F6D23A - 63d126f316b188a7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[FeedSlidingViewController handlePanGesture:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/Feed/FeedSlidingViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "112">
-               </Location>
-               <Location
-                  uuid = "D2967F1D-BCCB-4FE3-8A9D-4E9C04F6D23A - e8cce615d0fcd49f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[FeedSlidingViewController handlePanGesture:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/FeedSlidingViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "80">
-               </Location>
-               <Location
-                  uuid = "D2967F1D-BCCB-4FE3-8A9D-4E9C04F6D23A - e8cce615d0fcd4a0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[FeedSlidingViewController handlePanGesture:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/FeedSlidingViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "80">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -128,68 +66,6 @@
             endingLineNumber = "40"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "37609026-457F-40F3-A79B-3F6B61761780 - de154b38a172d161"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[OtherProfileViewController viewDidLoad]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/Profile/OtherProfileViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "26"
-                  endingLineNumber = "26"
-                  offsetFromSymbolStart = "420">
-               </Location>
-               <Location
-                  uuid = "37609026-457F-40F3-A79B-3F6B61761780 - de154b38a172d140"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[OtherProfileViewController viewDidLoad]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/Profile/OtherProfileViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "160">
-               </Location>
-               <Location
-                  uuid = "37609026-457F-40F3-A79B-3F6B61761780 - de154b38a172d058"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[OtherProfileViewController viewDidLoad]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/Profile/OtherProfileViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "160">
-               </Location>
-               <Location
-                  uuid = "37609026-457F-40F3-A79B-3F6B61761780 - de154b38a172d0bf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[OtherProfileViewController viewDidLoad]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/Profile/OtherProfileViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "160">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -222,38 +98,6 @@
             endingLineNumber = "40"
             landmarkName = "-gestureRecognizerShouldBegin:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F9AE786B-B8C2-47D8-8800-1B952F8FE228 - 62625e6ad189ce3c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[FeedSlidingScrollView gestureRecognizerShouldBegin:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/FeedSlidingScrollView.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "144">
-               </Location>
-               <Location
-                  uuid = "F9AE786B-B8C2-47D8-8800-1B952F8FE228 - 62625e6ad189cd5b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[FeedSlidingScrollView gestureRecognizerShouldBegin:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/FeedSlidingScrollView.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "236">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -302,38 +146,6 @@
             endingLineNumber = "17"
             landmarkName = "-navigationController:animationControllerForOperation:fromViewController:toViewController:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2A235747-60D9-4BA1-8699-485E49004E4E - 4050a2adfab2669b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[FeedSlidingViewController(Transition) navigationController:animationControllerForOperation:fromViewController:toViewController:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/FeedSlidingViewController+Transition.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "136">
-               </Location>
-               <Location
-                  uuid = "2A235747-60D9-4BA1-8699-485E49004E4E - 4050a2adfab2669b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[FeedSlidingViewController(Transition) navigationController:animationControllerForOperation:fromViewController:toViewController:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/FeedSlidingViewController+Transition.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "132">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -350,38 +162,6 @@
             endingLineNumber = "61"
             landmarkName = "-handlePanGesture:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F2A6EAF1-107B-43CE-8624-0254350426DC - cac06cd3ba0a20e3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[OtherProfileViewController handlePanGesture:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/Profile/OtherProfileViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "80">
-               </Location>
-               <Location
-                  uuid = "F2A6EAF1-107B-43CE-8624-0254350426DC - cac06cd3ba0a2082"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[OtherProfileViewController handlePanGesture:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/Profile/OtherProfileViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "80">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -398,38 +178,6 @@
             endingLineNumber = "65"
             landmarkName = "-handlePanGesture:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "546F7D1E-D7DA-4673-B54F-57FA00CFB223 - cac06cd3ba0a2044"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[OtherProfileViewController handlePanGesture:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/Profile/OtherProfileViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "196">
-               </Location>
-               <Location
-                  uuid = "546F7D1E-D7DA-4673-B54F-57FA00CFB223 - cac06cd3ba0a2044"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[OtherProfileViewController handlePanGesture:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/Profile/OtherProfileViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "296">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -462,38 +210,6 @@
             endingLineNumber = "103"
             landmarkName = "-gestureRecognizerShouldBegin:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6143C835-DDE2-47F4-AF9B-45F948A0F9B7 - b7a3fd9b42114d37"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[FeedSlidingViewController gestureRecognizerShouldBegin:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/FeedSlidingViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "103"
-                  endingLineNumber = "103"
-                  offsetFromSymbolStart = "416">
-               </Location>
-               <Location
-                  uuid = "6143C835-DDE2-47F4-AF9B-45F948A0F9B7 - b7a3fd9b42114d37"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[FeedSlidingViewController gestureRecognizerShouldBegin:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Feed/FeedSlidingViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "103"
-                  endingLineNumber = "103"
-                  offsetFromSymbolStart = "384">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -510,53 +226,6 @@
             endingLineNumber = "39"
             landmarkName = "-transition_setDelegate:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "65167419-EB9D-49A4-9988-624E14F32E19 - 931327d9417b10d3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[UINavigationController(Transition) transition_setDelegate:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Transition/UINavigationController+Transition.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "84">
-               </Location>
-               <Location
-                  uuid = "65167419-EB9D-49A4-9988-624E14F32E19 - 931327d9417b1011"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[UINavigationController(Transition) transition_setDelegate:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Transition/UINavigationController+Transition.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "84">
-               </Location>
-               <Location
-                  uuid = "65167419-EB9D-49A4-9988-624E14F32E19 - 931327d9417b15bd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[UINavigationController(Transition) transition_setDelegate:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Transition/UINavigationController+Transition.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "84">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -685,38 +354,6 @@
             endingLineNumber = "84"
             landmarkName = "-textFieldDidBeginEditing:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2231503F-30B4-4347-BDBC-63DDDC38DB97 - 61f05294c17415c2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[FriendsVC keyboardWillShow:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Friends/FriendsVC.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "2231503F-30B4-4347-BDBC-63DDDC38DB97 - 6b654783102008a5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[FriendsVC textFieldDidBeginEditing:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Friends/FriendsVC.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "76">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -749,38 +386,6 @@
             endingLineNumber = "100"
             landmarkName = "-keyboardDidShow:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "D8804CC7-95F7-46C6-BFB0-1E4F35CCD2C8 - 25f4d233e8277e32"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[FriendsVC hideKeyboard:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Friends/FriendsVC.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "60">
-               </Location>
-               <Location
-                  uuid = "D8804CC7-95F7-46C6-BFB0-1E4F35CCD2C8 - 63a16125796ffe5a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[FriendsVC keyboardDidShow:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Friends/FriendsVC.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "232">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -957,38 +562,38 @@
             endingLineNumber = "35"
             landmarkName = "-animateTransitionLeftPush:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "068F8DE6-38E8-4B6A-9554-7BA53DEA1A77 - 6a8596e0c4ef1e82"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[DefaultPushTransiotion animateTransitionLeftPush:]"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Transition/DefaultPushTransiotion.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "496">
-               </Location>
-               <Location
-                  uuid = "068F8DE6-38E8-4B6A-9554-7BA53DEA1A77 - 5537e278b2d6f857"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__52-[DefaultPushTransiotion animateTransitionLeftPush:]_block_invoke"
-                  moduleName = "UITest"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/Bytedance/UITest/UITest/UITest/Transition/DefaultPushTransiotion.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "36">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6044539D-D5D6-4AD5-B8A3-420E137328B1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Feed/FeedTableViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "-scrollViewDidScroll:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B1288813-B385-49A0-941D-57B4B12378E3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Inbox/InboxVC.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-addCoreAnimationUIView"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -28,6 +28,7 @@
 		2B2E9F192CCF3E3A00DFC9ED /* DefaultTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F182CCF3E3A00DFC9ED /* DefaultTransitionDelegate.m */; };
 		2B2E9F1C2CCF3F0400DFC9ED /* DefaultPushTransiotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F1B2CCF3F0400DFC9ED /* DefaultPushTransiotion.m */; };
 		2B2E9F1F2CCF63B100DFC9ED /* DefaultPopTransiotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9F1E2CCF63B100DFC9ED /* DefaultPopTransiotion.m */; };
+		2BB1158A2CF59B5C008F6D40 /* InboxVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB115892CF59B5C008F6D40 /* InboxVC.m */; };
 		2BB78ECA2CD38DCA0056DBB9 /* TestTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB78EC92CD38DCA0056DBB9 /* TestTouchView.m */; };
 		2BB797FD2CDA23280056DBB9 /* Responder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB797FC2CDA23280056DBB9 /* Responder.m */; };
 		2BE5E3982CD357E700651685 /* UIGestureRecognizer+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5E3972CD357E700651685 /* UIGestureRecognizer+Test.m */; };
@@ -93,6 +94,8 @@
 		2B2E9F1B2CCF3F0400DFC9ED /* DefaultPushTransiotion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultPushTransiotion.m; sourceTree = "<group>"; };
 		2B2E9F1D2CCF63B100DFC9ED /* DefaultPopTransiotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefaultPopTransiotion.h; sourceTree = "<group>"; };
 		2B2E9F1E2CCF63B100DFC9ED /* DefaultPopTransiotion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DefaultPopTransiotion.m; sourceTree = "<group>"; };
+		2BB115882CF59B5C008F6D40 /* InboxVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InboxVC.h; sourceTree = "<group>"; };
+		2BB115892CF59B5C008F6D40 /* InboxVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InboxVC.m; sourceTree = "<group>"; };
 		2BB78EC82CD38DCA0056DBB9 /* TestTouchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTouchView.h; sourceTree = "<group>"; };
 		2BB78EC92CD38DCA0056DBB9 /* TestTouchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTouchView.m; sourceTree = "<group>"; };
 		2BB797FB2CDA23280056DBB9 /* Responder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Responder.h; sourceTree = "<group>"; };
@@ -153,6 +156,7 @@
 		2B2E9EBE2CCB6AC100DFC9ED /* UITest */ = {
 			isa = PBXGroup;
 			children = (
+				2BB115872CF59B18008F6D40 /* Inbox */,
 				2BB793112CD871460056DBB9 /* Tab */,
 				2BF063812CD3892A00A2B3F1 /* Friends */,
 				2B2E9F072CCB81CF00DFC9ED /* Transition */,
@@ -236,6 +240,15 @@
 				2BE5E3972CD357E700651685 /* UIGestureRecognizer+Test.m */,
 			);
 			path = Transition;
+			sourceTree = "<group>";
+		};
+		2BB115872CF59B18008F6D40 /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				2BB115882CF59B5C008F6D40 /* InboxVC.h */,
+				2BB115892CF59B5C008F6D40 /* InboxVC.m */,
+			);
+			path = Inbox;
 			sourceTree = "<group>";
 		};
 		2BB793112CD871460056DBB9 /* Tab */ = {
@@ -388,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B2E9F1F2CCF63B100DFC9ED /* DefaultPopTransiotion.m in Sources */,
+				2BB1158A2CF59B5C008F6D40 /* InboxVC.m in Sources */,
 				2BB797FD2CDA23280056DBB9 /* Responder.m in Sources */,
 				2B2E9F062CCB6FE100DFC9ED /* TabBar.m in Sources */,
 				2B2E9F192CCF3E3A00DFC9ED /* DefaultTransitionDelegate.m in Sources */,

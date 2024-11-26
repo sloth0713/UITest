@@ -8,6 +8,7 @@
 #import "TabBar.h"
 #import "../Feed/FeedSlidingViewController.h"
 #import "../Friends/FriendsVC.h"
+#import "../Inbox/InboxVC.h"
 #import "../Responder.h"
 
 @implementation TabBar
@@ -25,7 +26,7 @@
         friendsVC.view.backgroundColor = [UIColor whiteColor];
         friendsVC.tabBarItem.title = @"Friends";
         
-        UIViewController *inboxVC = [[UIViewController alloc] init];
+        InboxVC *inboxVC = [[InboxVC alloc] init];
         inboxVC.view.backgroundColor = [UIColor whiteColor];
         inboxVC.tabBarItem.title = @"Inbox";
         

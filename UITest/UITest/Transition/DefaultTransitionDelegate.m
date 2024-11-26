@@ -41,7 +41,7 @@
             break;
             
         default:
-            return [[DefaultPushTransiotion alloc] init];
+            return nil;
             break;
     }
 }
