@@ -8,6 +8,7 @@
 #import "SceneDelegate.h"
 #import "ViewController.h"
 #import "TabBar.h"
+#import "Fluency/RunLoopFluencyMonitor.h"
 
 @interface SceneDelegate ()
 
@@ -30,6 +31,8 @@
     
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
+    
+    [RunLoopFluencyMonitor shareMonitor];
 }
 
 

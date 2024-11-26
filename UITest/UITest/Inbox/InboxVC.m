@@ -17,7 +17,7 @@
 
 @property (nonatomic, strong) UIView *coreAnimatedView;
 
-@property (nonatomic, strong) UIView *coreAnimatedUIView;
+@property (nonatomic, strong) UIButton *coreAnimatedUIView;
 
 @end
 
@@ -29,19 +29,26 @@
 //    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, self.view.bounds.size.height-200)];
 //    bgView.backgroundColor = [UIColor greenColor];
 //    [self.view addSubview:bgView];
-    self.coreAnimatedUIView = [[UIView alloc] initWithFrame:CGRectMake(100, 400, 100, 100)];
+    self.coreAnimatedUIView = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.coreAnimatedUIView.frame = CGRectMake(100, 400, 100, 100);
     self.coreAnimatedUIView.backgroundColor = [UIColor greenColor];
+    [self.coreAnimatedUIView addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.coreAnimatedUIView];
     
     
+}
+- (void)buttonClicked:sender
+{
+    //模拟kCFRunLoopBeforeSources的卡顿
+    [NSThread sleepForTimeInterval:3];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self addDispalayLinkAnimationView];
-        [self addCoreAnimationView];
-        [self addCoreAnimationUIView];
+//        [self addDispalayLinkAnimationView];
+//        [self addCoreAnimationView];
+//        [self addCoreAnimationUIView];
     });
 }
 
