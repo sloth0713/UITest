@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "TabBar.h"
 #import "Fluency/RunLoopFluencyMonitor.h"
+#import "Fluency/DisplayLinkFluencyMonitor.h"
 
 @interface SceneDelegate ()
 
@@ -32,7 +33,8 @@
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
     
-    [RunLoopFluencyMonitor shareMonitor];
+//    [RunLoopFluencyMonitor shareMonitor];
+    [DisplayLinkFluencyMonitor shareMonitor];
 }
 
 
