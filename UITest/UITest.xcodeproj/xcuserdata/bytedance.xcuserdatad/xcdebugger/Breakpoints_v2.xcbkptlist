@@ -695,16 +695,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E961F8B9-F091-4AEA-AB47-F0E6BFF8DB4D"
-            shouldBeEnabled = "Yes"
+            uuid = "36E11E68-1F26-42C4-9ED3-B0FCD532A306"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UITest/Inbox/AnimationVC.m"
+            filePath = "UITest/Inbox/CollectionVC/MyLayout.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "-dealloc"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "-prepareLayout"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

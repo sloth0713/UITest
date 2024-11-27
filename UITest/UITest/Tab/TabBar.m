@@ -27,7 +27,7 @@
         friendsVC.tabBarItem.title = @"Friends";
         
         InboxVC *inboxVC = [[InboxVC alloc] init];//加到tabbar中的vc的view会自动和tabbar的frame一致
-//        inboxVC.view.backgroundColor = [UIColor whiteColor];
+        inboxVC.view.backgroundColor = [UIColor whiteColor];
         inboxVC.tabBarItem.title = @"Inbox";
         
         UIViewController *profileVC = [[UIViewController alloc] init];

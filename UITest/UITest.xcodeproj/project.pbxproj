@@ -32,6 +32,8 @@
 		2BB1158E2CF5BD03008F6D40 /* RunLoopFluencyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1158D2CF5BD03008F6D40 /* RunLoopFluencyMonitor.m */; };
 		2BB115912CF5CE43008F6D40 /* DisplayLinkFluencyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB115902CF5CE43008F6D40 /* DisplayLinkFluencyMonitor.m */; };
 		2BB115942CF6F2DD008F6D40 /* AnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB115932CF6F2DD008F6D40 /* AnimationVC.m */; };
+		2BB115982CF6F769008F6D40 /* CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB115972CF6F769008F6D40 /* CollectionVC.m */; };
+		2BB1159B2CF6F84E008F6D40 /* MyLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1159A2CF6F84E008F6D40 /* MyLayout.m */; };
 		2BB78ECA2CD38DCA0056DBB9 /* TestTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB78EC92CD38DCA0056DBB9 /* TestTouchView.m */; };
 		2BB797FD2CDA23280056DBB9 /* Responder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB797FC2CDA23280056DBB9 /* Responder.m */; };
 		2BE5E3982CD357E700651685 /* UIGestureRecognizer+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5E3972CD357E700651685 /* UIGestureRecognizer+Test.m */; };
@@ -105,6 +107,10 @@
 		2BB115902CF5CE43008F6D40 /* DisplayLinkFluencyMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayLinkFluencyMonitor.m; sourceTree = "<group>"; };
 		2BB115922CF6F2DD008F6D40 /* AnimationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationVC.h; sourceTree = "<group>"; };
 		2BB115932CF6F2DD008F6D40 /* AnimationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationVC.m; sourceTree = "<group>"; };
+		2BB115962CF6F769008F6D40 /* CollectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionVC.h; sourceTree = "<group>"; };
+		2BB115972CF6F769008F6D40 /* CollectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionVC.m; sourceTree = "<group>"; };
+		2BB115992CF6F84E008F6D40 /* MyLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLayout.h; sourceTree = "<group>"; };
+		2BB1159A2CF6F84E008F6D40 /* MyLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyLayout.m; sourceTree = "<group>"; };
 		2BB78EC82CD38DCA0056DBB9 /* TestTouchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTouchView.h; sourceTree = "<group>"; };
 		2BB78EC92CD38DCA0056DBB9 /* TestTouchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTouchView.m; sourceTree = "<group>"; };
 		2BB797FB2CDA23280056DBB9 /* Responder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Responder.h; sourceTree = "<group>"; };
@@ -255,6 +261,7 @@
 		2BB115872CF59B18008F6D40 /* Inbox */ = {
 			isa = PBXGroup;
 			children = (
+				2BB115952CF6F749008F6D40 /* CollectionVC */,
 				2BB115882CF59B5C008F6D40 /* InboxVC.h */,
 				2BB115892CF59B5C008F6D40 /* InboxVC.m */,
 				2BB115922CF6F2DD008F6D40 /* AnimationVC.h */,
@@ -272,6 +279,17 @@
 				2BB115902CF5CE43008F6D40 /* DisplayLinkFluencyMonitor.m */,
 			);
 			path = Fluency;
+			sourceTree = "<group>";
+		};
+		2BB115952CF6F749008F6D40 /* CollectionVC */ = {
+			isa = PBXGroup;
+			children = (
+				2BB115962CF6F769008F6D40 /* CollectionVC.h */,
+				2BB115972CF6F769008F6D40 /* CollectionVC.m */,
+				2BB115992CF6F84E008F6D40 /* MyLayout.h */,
+				2BB1159A2CF6F84E008F6D40 /* MyLayout.m */,
+			);
+			path = CollectionVC;
 			sourceTree = "<group>";
 		};
 		2BB793112CD871460056DBB9 /* Tab */ = {
@@ -442,9 +460,11 @@
 				2B2E9F002CCB6F9700DFC9ED /* FeedTableViewController.m in Sources */,
 				2BB78ECA2CD38DCA0056DBB9 /* TestTouchView.m in Sources */,
 				2B2E9ED22CCB6AC200DFC9ED /* main.m in Sources */,
+				2BB1159B2CF6F84E008F6D40 /* MyLayout.m in Sources */,
 				2B2E9F0D2CCB821900DFC9ED /* UINavigationController+Transition.m in Sources */,
 				2B2E9F102CCB90C500DFC9ED /* Feed2ProfileTransition.m in Sources */,
 				2B2E9EC42CCB6AC100DFC9ED /* SceneDelegate.m in Sources */,
+				2BB115982CF6F769008F6D40 /* CollectionVC.m in Sources */,
 				2B2E9EF82CCB6F8800DFC9ED /* OtherProfileViewController.m in Sources */,
 				2BE5E39F2CD3617100651685 /* ProfileMaskView.m in Sources */,
 				2B2E9F162CCB97C600DFC9ED /* FullScreenPopTransition.m in Sources */,
