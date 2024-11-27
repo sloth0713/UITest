@@ -32,8 +32,13 @@
     
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
+    [self startMonitor];
+}
+
+- (void)startMonitor
+{
     
-//    [RunLoopFluencyMonitor shareMonitor];
+    [RunLoopFluencyMonitor shareMonitor];
     [DisplayLinkFluencyMonitor shareMonitor];
 }
 
