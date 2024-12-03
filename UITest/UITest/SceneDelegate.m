@@ -10,6 +10,7 @@
 #import "TabBar.h"
 #import "Fluency/RunLoopFluencyMonitor.h"
 #import "Fluency/DisplayLinkFluencyMonitor.h"
+#import "Thread/ThreadTest.h"
 
 @interface SceneDelegate ()
 
@@ -32,7 +33,9 @@
     
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
-    [self startMonitor];
+    
+    [[ThreadTest alloc] init];
+//    [self startMonitor];
 }
 
 - (void)startMonitor

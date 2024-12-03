@@ -7,6 +7,7 @@
 
 #import "CollectionVC.h"
 #import "MyLayout.h"
+#import "OnlineImageView.h"
 
 @implementation CollectionVC
 
@@ -25,6 +26,31 @@
   
     [self.view addSubview:collect];
     
+    OnlineImageView *ve = [[OnlineImageView alloc] init];
+    for (int i=0; i<=100; i++) {
+        [ve loadImage];
+    }
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSLog(@"fdsa");
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    NSLog(@"fdsa");
+}
+
+- (void)viewDidLayoutSubviews
+{
+    NSLog(@"fdsa");
+}
+
+- (void)viewWillLayoutSubviews
+{
+    NSLog(@"fdsa");
 }
  
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
@@ -38,6 +64,9 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell * cell  = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellid" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
+//    OnlineImageView *image = [[OnlineImageView alloc] initWithFrame:cell.frame];
+//    [image loadImage];
+//    [cell addSubview:image];
     return cell;
 }
 

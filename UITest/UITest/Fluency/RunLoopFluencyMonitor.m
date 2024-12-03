@@ -96,7 +96,7 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActi
     
     dispatch_semaphore_t semaphore = lagMonitor.dispatchSemaphore;
     dispatch_semaphore_signal(semaphore);
-//    stringFromActivity(activity);
+    stringFromActivity(activity);
 }
 
 - (void)log
