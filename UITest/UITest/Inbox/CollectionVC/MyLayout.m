@@ -6,6 +6,7 @@
 //
 
 #import "MyLayout.h"
+#import "OnlineImageView.h"
 
 @interface MyLayout ()
 
@@ -23,7 +24,8 @@
     
     //计算每一个item的宽度
     float WIDTH = (self.width - self.sectionInset.left - self.sectionInset.right - self.minimumInteritemSpacing)/2;
-
+    [[OnlineImageView shareManager] loadImages:100 width:WIDTH];
+    
     //这个数组的主要作用是保存每一列的总高度，这样在布局时，我们可以始终将下一个Item放在最短的列下面
     //目前固定两列
     CGFloat colHight[2]={self.sectionInset.top,self.sectionInset.bottom};
@@ -33,7 +35,11 @@
         UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:index];
         
         //随机一个高度 在40——190之间
-        CGFloat hight = arc4random()%150+40;
+//        CGFloat hight = arc4random()%150+40;
+        UIImage *image = [[[OnlineImageView shareManager] getImageArray] objectAtIndex:i];
+        CGFloat hight = image.size.height;
+        
+        NSLog(@"prepareLayout : %lf",hight);
         
         //哪一列高度小 则放到那一列下面
         int width=0;

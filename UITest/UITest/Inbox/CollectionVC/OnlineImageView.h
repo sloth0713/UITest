@@ -11,7 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OnlineImageView : UIView
-- (void)loadImage;
+
++ (instancetype)shareManager;
+- (void)loadImages:(int)count width:(float)width;
+- (NSArray <UIImage *> *)getImageArray;
+//@property(nonatomic,strong)NSMutableArray <UIImage *> * dataArray;
 @end
 
 NS_ASSUME_NONNULL_END
