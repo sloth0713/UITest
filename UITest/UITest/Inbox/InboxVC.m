@@ -15,7 +15,8 @@
 - (instancetype)init
 {
     if (self=[super init]) {
-        [self addChildCollectionVC];
+//        [self addChildCollectionVC];
+        [self addChildAnimationVC];
     }
     return self;
 }

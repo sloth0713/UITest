@@ -7,6 +7,61 @@
 
 #import "AnimationVC.h"
 
+@implementation CoreAnimatedUISubView
+
+- (void)drawRect:(CGRect)rect
+{
+    [super drawRect:rect];
+    
+    NSLog(@"drawRect");
+}
+
+- (void)willMoveToSuperview:(UIView *)newSuperview
+{
+    [super willMoveToSuperview:newSuperview];
+    NSLog(@"willMoveToSuperview");
+}
+
+- (void)didMoveToSuperview
+{
+    [super didMoveToSuperview];
+    NSLog(@"didMoveToSuperview");
+}
+
+- (void)willMoveToWindow:(UIWindow *)newWindow
+{
+    [super willMoveToWindow:newWindow];
+    NSLog(@"willMoveToWindow");
+}
+
+- (void)didMoveToWindow
+{
+    [super didMoveToWindow];
+    NSLog(@"didMoveToWindow");
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+//    [NSThread sleepForTimeInterval:10];
+    NSLog(@"layoutSubviews");
+}
+
+- (void)didAddSubview:(UIView *)subview
+{
+    [super didAddSubview:subview];
+    NSLog(@"didAddSubview");
+}
+
+- (void)willRemoveSubview:(UIView *)subview
+{
+    [super willRemoveSubview:subview];
+    NSLog(@"willRemoveSubview");
+}
+
+
+@end
+
 @interface AnimationVC ()
 
 @property (nonatomic, strong) CADisplayLink *displayLink;
@@ -94,6 +149,9 @@
 - (void)startCoreAnimationUIView
 {
     self.coreAnimatedUIView.frame = CGRectMake(100, 400, 100, 100);
+    CoreAnimatedUISubView *coreAnimatedUISubView = [[CoreAnimatedUISubView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    coreAnimatedUISubView.backgroundColor = [UIColor yellowColor];
+    [self.coreAnimatedUIView addSubview:coreAnimatedUISubView];
     [UIView animateWithDuration:2.0
                           delay:0.0
                         options:UIViewAnimationOptionCurveLinear | UIViewAnimationOptionRepeat
