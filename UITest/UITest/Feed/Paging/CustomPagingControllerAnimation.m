@@ -1,26 +1,23 @@
 //
-//  CustomPagingController.m
+//  CustomPagingControllerAnimation.m
 //  UITest
 //
 //  Created by ByteDance on 2024/12/4.
 //
 
-#import "CustomPagingController.h"
+#import "CustomPagingControllerAnimation.h"
 
-@interface CustomPagingController ()
-
+@interface CustomPagingControllerAnimation ()
 @property (nonatomic,strong)UIScrollView *scrollView;
 @property (nonatomic, assign) CGPoint beginContentOffset;
 @property (nonatomic, assign) CGPoint endContentOffset;
 
-@property (nonatomic, assign) NSTimeInterval beginTime;
 @property (nonatomic, strong) CADisplayLink *displayLinkTimer;
 
-@property (nonatomic, assign, getter=isAnimating) BOOL animating;
 
 @end
 
-@implementation CustomPagingController
+@implementation CustomPagingControllerAnimation
 
 - (instancetype)initWithScrollView:(UIScrollView *)scrollView
 {
@@ -45,38 +42,26 @@
     self.beginContentOffset = self.scrollView.contentOffset;
     self.endContentOffset = [self targetContentOffsetWithScrollingVelocity:velocity];
     *targetContentOffset = self.scrollView.contentOffset;
-    if (CGPointEqualToPoint(self.beginContentOffset, self.endContentOffset)) {
-        [self cancelScrollAnimation];
-    }
-    [self startScrollAnimation];
+    [self startCoreScrollAnimation];
+
 }
-
-- (void)startScrollAnimation {
-    [self cancelScrollAnimation];
-    self.animating = YES;
-
-    self.beginTime = [NSDate timeIntervalSinceReferenceDate];
+- (void)startCoreScrollAnimation {
     self.displayLinkTimer.paused = NO;
-}
-
-- (void)updateScrollAnimation:(CADisplayLink *)timer {
-    const NSTimeInterval currentTime = [NSDate timeIntervalSinceReferenceDate];
-    const NSTimeInterval elapsedTime = currentTime - self.beginTime;
-    const CGFloat animationPosition = MIN(1, (elapsedTime / self.animationDuration));
-
-    CGPoint targetContentOffset = CGPointMake(AnimationLinear(animationPosition, self.beginContentOffset.x, self.endContentOffset.x),
-                                              AnimationLinear(animationPosition, self.beginContentOffset.y, self.endContentOffset.y));
-
-    [self.scrollView setContentOffset:targetContentOffset animated:NO];
-    
-    if (animationPosition == 1) {
-        [self cancelScrollAnimation];
+    [UIView animateWithDuration:self.animationDuration animations:^{
+        [self.scrollView setContentOffset:self.endContentOffset];
+    }completion:^(BOOL finished) {
+        if (finished) {
+            self.displayLinkTimer.paused = YES;
+            self.displayLinkTimer = nil;
+        }
     }
+    ];
 }
 
-- (void)cancelScrollAnimation {
-    self.displayLinkTimer.paused = YES;
-    self.animating = NO;
+- (void)updateScrollAnimation:(CADisplayLink *)timer
+{
+//    NSLog(@"updateScrollAnimation");
+    [self.scrollView.delegate scrollViewDidScroll:self.scrollView];
 }
 
 - (CGPoint)targetContentOffsetWithScrollingVelocity:(CGPoint)velocity
@@ -110,14 +95,6 @@
 
     return CGPointMake(targetOffsetX, targetOffsetY);
 }
-
-CGFloat AnimationLinear(CGFloat t, CGFloat start, CGFloat end)
-{
-    if (t <= 0) return start;
-    if (t >= 1) return end;
-    return start + t * (end - start);
-}
-
 @synthesize animationDuration;
 
 @end

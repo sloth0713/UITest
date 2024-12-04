@@ -1,5 +1,5 @@
 //
-//  CustomPagingController.h
+//  CustomPagingControllerAnimation.h
 //  UITest
 //
 //  Created by ByteDance on 2024/12/4.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CustomPagingController : NSObject <CustomPagingControllerProtocol>
+@interface CustomPagingControllerAnimation  : NSObject <CustomPagingControllerProtocol>
 
 @end
 

@@ -10,6 +10,8 @@
 #import "./Profile/OtherProfileViewController.h"
 #import "../../UITest/Responder.h"
 #import "Paging/CustomPagingController.h"
+#import "Paging/CustomPagingControllerAnimation.h"
+#import "Paging/CustomPagingControllerProtocol.h"
 
 #define cellCount 20
 
@@ -25,7 +27,7 @@
 
 @property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
 
-@property (nonatomic, strong) CustomPagingController *customPagingController;
+@property (nonatomic, strong) id <CustomPagingControllerProtocol> customPagingController;
 
 @end
 
@@ -59,8 +61,9 @@
     self.tableView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height*cellCount);
     self.tableView.pagingEnabled = !self.enbaleCustomPaging;
     if (self.enbaleCustomPaging){
-        self.customPagingController = [[CustomPagingController alloc] initWithScrollView:self.tableView];
-        self.customPagingController.animationDuration = 0.17;
+//        self.customPagingController = [[CustomPagingController alloc] initWithScrollView:self.tableView];
+        self.customPagingController = [[CustomPagingControllerAnimation alloc] initWithScrollView:self.tableView];
+        self.customPagingController.animationDuration = 1;
     }
     
     self.tableView.backgroundColor = [UIColor greenColor];
@@ -112,6 +115,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    //setContentOffset会调用scrollViewDidScroll
     NSLog(@"scrollViewDidScroll");
 }
 
