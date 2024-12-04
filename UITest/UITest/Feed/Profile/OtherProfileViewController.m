@@ -43,9 +43,9 @@
     [self addChildViewController:self.tableVC];
     self.tableVC.view.frame = CGRectMake(0, profileHeadHeight, self.view.frame.size.width, self.view.frame.size.height - profileHeadHeight);
     
-    self.maskView = [[ProfileMaskView alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:self.maskView];
-//    [self.view addSubview:self.tableVC.view];
+//    self.maskView = [[ProfileMaskView alloc] initWithFrame:self.view.frame];
+//    [self.view addSubview:self.maskView];
+    [self.view addSubview:self.tableVC.view];
     [self addPanGesture];
 }
 
@@ -103,4 +103,46 @@
     return [[FullScreenPopTransition alloc] init];
 }
 
+
+#pragma mark - VC life cycle
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"viewWillAppear");
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"viewDidAppear");
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    NSLog(@"viewWillDisappear");
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    NSLog(@"viewDidDisappear");
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillLayoutSubviews
+{
+//    [NSThread sleepForTimeInterval:5];
+    [super viewWillLayoutSubviews];
+    NSLog(@"viewWillLayoutSubviews");
+}
+
+- (void)viewDidLayoutSubviews
+{
+    //在viewDidLayoutSubviews之前转场动画已经执行了，这里sleep很久之后实际动画才开始。也就是说core animation动画开始之前需要view的所有生命周期都执行完成
+//    [NSThread sleepForTimeInterval:5];
+    [super viewDidLayoutSubviews];
+    NSLog(@"viewDidLayoutSubviews");
+}
 @end
