@@ -9,6 +9,7 @@
 #import "../Transition/TransitionManager.h"
 #import "./Profile/OtherProfileViewController.h"
 #import "../../UITest/Responder.h"
+#import "Paging/CustomPagingController.h"
 
 #define cellCount 20
 
@@ -24,6 +25,8 @@
 
 @property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
 
+@property (nonatomic, strong) CustomPagingController *customPagingController;
+
 @end
 
 @implementation FeedTableViewController
@@ -33,6 +36,7 @@
     self = [super init];
     if (self){
         self.name = name;
+        self.enbaleCustomPaging = YES;
     }
     return self;
 }
@@ -53,7 +57,12 @@
     [super viewDidLoad];
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     self.tableView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height*cellCount);
-    self.tableView.pagingEnabled = YES;
+    self.tableView.pagingEnabled = !self.enbaleCustomPaging;
+    if (self.enbaleCustomPaging){
+        self.customPagingController = [[CustomPagingController alloc] initWithScrollView:self.tableView];
+        self.customPagingController.animationDuration = 0.17;
+    }
+    
     self.tableView.backgroundColor = [UIColor greenColor];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -98,15 +107,24 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"fdsaf");
+    NSLog(@"didSelectRowAtIndexPath");
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSLog(@"scrollViewDidScroll");
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     self.beginDraggingTime = [NSDate date];
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    if (self.enbaleCustomPaging){
+        [self.customPagingController startAnimatingWithVelocity:velocity targetContentOffset:targetContentOffset];
+    }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate

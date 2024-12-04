@@ -12,6 +12,7 @@
 - (instancetype)initWithName:(NSString *)name;
 @property (nonatomic, assign) BOOL isLastVC;
 @property (nonatomic, strong, readonly) NSString *name;
+@property (nonatomic, assign) BOOL enbaleCustomPaging;
 
 @end
 
