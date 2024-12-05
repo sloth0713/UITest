@@ -6,6 +6,7 @@
 //
 
 #import "CustomPagingControllerAnimation.h"
+#import <objc/runtime.h>
 
 @interface CustomPagingControllerAnimation ()
 @property (nonatomic,strong)UIScrollView *scrollView;
@@ -23,6 +24,7 @@
 {
     if (self=[super init]) {
         self.scrollView = scrollView;
+        [UIScrollView swizzled];
     }
     return self;
 }
@@ -47,12 +49,22 @@
 }
 - (void)startCoreScrollAnimation {
     self.displayLinkTimer.paused = NO;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.scrollView setContentOffset:CGPointMake(self.endContentOffset.x, self.endContentOffset.y+300)];
+    });
+    
     [UIView animateWithDuration:self.animationDuration animations:^{
         [self.scrollView setContentOffset:self.endContentOffset];
+        self.scrollView.isCustomPaging = YES;
     }completion:^(BOOL finished) {
         if (finished) {
             self.displayLinkTimer.paused = YES;
             self.displayLinkTimer = nil;
+            self.scrollView.isCustomPaging = NO;
+            
+            //业务代码
+//            [self.scrollView setContentOffset:CGPointMake(self.endContentOffset.x, self.endContentOffset.y-300)];
         }
     }
     ];
@@ -96,5 +108,43 @@
     return CGPointMake(targetOffsetX, targetOffsetY);
 }
 @synthesize animationDuration;
+
+@end
+
+@implementation UIScrollView (paging)
+
++ (void)hookMethod:(SEL)originalSelector swizzledSelectorPop:(SEL)swizzledSelector
+{
+    Method originalMethodPop = class_getInstanceMethod([self class], originalSelector);
+    Method swizzledMethodPop = class_getInstanceMethod([self class], swizzledSelector);
+    method_exchangeImplementations(originalMethodPop, swizzledMethodPop);
+}
+
++ (void)swizzled
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self hookMethod:@selector(setContentOffset:) swizzledSelectorPop:@selector(paging_setContentOffset:)];
+    });
+}
+
+- (void)paging_setContentOffset:(CGPoint)contentOffset
+{
+    
+    if (self.isCustomPaging){
+        NSLog(@"error can't set");
+        return;
+    }
+    
+    [self paging_setContentOffset:contentOffset];
+}
+
+- (void)setIsCustomPaging:(BOOL)isCustomPaging {
+    objc_setAssociatedObject(self, @selector(isCustomPaging), @(isCustomPaging), OBJC_ASSOCIATION_RETAIN);
+}
+
+- (BOOL)isCustomPaging {
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
+}
 
 @end

@@ -166,7 +166,26 @@
 //                         self.coreAnimatedUIView.frame = frame;
 //                         [self addCoreAnimationUIView];
                      }];
-
+    
+    /*
+     模拟Core Animation动画叠加
+     动画A执行过程中执行动画B
+     直接停止A，但是会以A的最终frame作为起始fram计算，按照B的逻辑计算最终的frame，然后按照B的时长和曲线执行动画
+     即停止A，继续动画，将AB的效果叠加
+     */
+    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [UIView animateWithDuration:2.0
+//                              delay:0.0
+//                            options:UIViewAnimationOptionCurveLinear
+//                         animations:^{
+//                             CGRect frame = self.coreAnimatedUIView.frame;
+//                             frame.origin.x += 100;
+//                             self.coreAnimatedUIView.frame = frame;
+//                         }
+//                         completion:^(BOOL finished) {
+//                         }];
+//    });
     
 }
 
