@@ -17,7 +17,7 @@ typedef enum : NSUInteger {
 @property (nonatomic,assign) TransitionType type;
 @end
 
-@interface DefaultTransitionDelegate : NSObject <UINavigationControllerDelegate>
+@interface DefaultTransitionDelegate : NSObject <UINavigationControllerDelegate, UIViewControllerTransitioningDelegate>
 
 @property (nonatomic,strong) TransitionContext *context;
 

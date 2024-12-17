@@ -43,9 +43,9 @@
     [self addChildViewController:self.tableVC];
     self.tableVC.view.frame = CGRectMake(0, profileHeadHeight, self.view.frame.size.width, self.view.frame.size.height - profileHeadHeight);
     
-//    self.maskView = [[ProfileMaskView alloc] initWithFrame:self.view.frame];
-//    [self.view addSubview:self.maskView];
-    [self.view addSubview:self.tableVC.view];
+    self.maskView = [[ProfileMaskView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:self.maskView];
+//    [self.view addSubview:self.tableVC.view];
     [self addPanGesture];
 }
 

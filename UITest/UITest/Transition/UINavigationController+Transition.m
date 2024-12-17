@@ -15,6 +15,8 @@
 
 +(void)hookDelegate
 {
+    BOOL customNavigationTransition = YES;
+    if (!customNavigationTransition) return;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [self hookMethod:@selector(setDelegate:) swizzledSelectorPop:@selector(transition_setDelegate:)];

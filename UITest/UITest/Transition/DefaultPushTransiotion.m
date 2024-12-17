@@ -22,7 +22,7 @@
     UIView *containerView = [transitionContext containerView]; // 获取转场的容器视图
     CGRect finalFrame = [transitionContext finalFrameForViewController:toVC]; // 获取目标视图控制器最终的frame
 
-    // 将目标视图添加到容器视图中
+    // 将目标视图添加到容器视图（UINavigationTransitionView）中
     [containerView addSubview:toVC.view];
 
     // 设置目标视图的初始frame

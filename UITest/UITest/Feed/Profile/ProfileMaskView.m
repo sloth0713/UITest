@@ -6,6 +6,8 @@
 //
 
 #import "ProfileMaskView.h"
+#import "../../../UITest/Responder.h"
+#import "DetailTableViewController.h"
 
 @interface ProfileMaskView ()
 
@@ -21,6 +23,13 @@
         self.panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
         [self addGestureRecognizer:self.panGesture];
         self.backgroundColor = [UIColor orangeColor];
+        
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 200, 100)];
+        button.backgroundColor = [UIColor blackColor];
+        [button setTitle:@"to detail feed" forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:button];
+        
     }
     return self;
 }
@@ -33,6 +42,21 @@
 - (void)pan:(UIPanGestureRecognizer *)panGesture
 {
     NSLog(@"fda");
+}
+
+- (void)buttonClicked:(UIButton *)sender {
+    NSLog(@"Button clicked!");
+//    [UIViewController dis]
+    
+    //UIViewController的setTransitioningDelegate被hook了，这样dismissViewControllerAnimated和presentViewController的时候都会走到设置好的delegate中的animationControllerForPresentedController的animationController中
+    
+//    为什么sparkview的dismissViewControllerAnimated是interacted的；因为在gestureRecognizerShouldBegin的时候把context设置成interacted了
+    
+//    dismissViewControllerAnimated -> TransitioningDelegate的animationControllerForDismissedController
+    
+    //todo，写一个presentViewController的自定义转场动画
+    UIViewController *topVC = Responder.shareInstance.topVC;
+    [topVC presentViewController:[[DetailTableViewController alloc] init] animated:YES completion:nil];
 }
 
 #pragma mark - view life cycle

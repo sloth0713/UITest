@@ -46,5 +46,19 @@
     }
 }
 
+- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
+//    sourceController：profile， presentvc：tabbar 有点问题
+//    Responder.shareInstance.topVC = source;
+    return [[DefaultPushTransiotion alloc] init];
+}
+
+- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+//    Responder.shareInstance.topVC = toVC;
+    return [[DefaultPopTransiotion alloc] init];
+//    return nil;
+}
+
 
 @end

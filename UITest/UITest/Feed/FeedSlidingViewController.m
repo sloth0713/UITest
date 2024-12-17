@@ -11,6 +11,7 @@
 #import "./Profile/OtherProfileViewController.h"
 #import "Feed2ProfileTransition.h"
 #import "../Transition/UINavigationController+Transition.h"
+#import "../Transition/UIViewController+Transition.h"
 
 @interface FeedSlidingViewController () <UINavigationControllerDelegate>
 @property (nonatomic, strong) FeedSlidingScrollView *scrolleView;
@@ -30,6 +31,7 @@
 {
     [super viewDidLoad];
     [UINavigationController hookDelegate];
+    [UIViewController hookDelegate];
     self.view.backgroundColor = [UIColor redColor];
     self.scrolleView = [[FeedSlidingScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     self.scrolleView.contentSize = CGSizeMake(self.view.frame.size.width * 3, self.view.frame.size.height);
