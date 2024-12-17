@@ -1086,8 +1086,8 @@
             filePath = "UITest/Transition/DefaultPushTransiotion.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "-animateTransitionLeftPush:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1102,24 +1102,8 @@
             filePath = "UITest/Transition/DefaultPushTransiotion.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "-animateTransitionLeftPush:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CAB4F6D2-F9BE-46A0-AF1F-40A045F66AB2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UITest/Transition/DefaultPushTransiotion.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "-animateTransitionLeftPush:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1470,8 +1454,8 @@
             filePath = "UITest/Transition/DefaultPushTransiotion.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "-transitionDuration:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1600,6 +1584,134 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22"
+            landmarkName = "-animateTransitionLeftPush:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1522178B-6B79-439E-9CFB-967C652DBC40"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Transition/DefaultPopTransiotion.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "-startDefaultAnimationWithFromVC:toVC:fromContextProvider:toContextProvider:containerView:context:completionHandler:duration:transitionContext:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E38EEBC-F2B1-4D30-A5BC-B967544BD178"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Transition/DefaultPopTransiotion.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "-animateTransitionPop:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6EBBF45A-ED90-4A12-8D88-2975748FC532"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Transition/DefaultPopTransiotion.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "-animateTransitionPop:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25500712-08EF-4B36-9893-9A57FBB7377F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Transition/DefaultPopTransiotion.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "-animateTransitionPop:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9504144E-B4F6-4B48-BB35-4C0C4A9C0753"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Transition/DefaultPushTransiotion.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-animateTransitionLeftPush:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A9C7710-F936-4BF3-AAE7-6D6021D6750E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Transition/DefaultPushTransiotion.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "-animateTransitionLeftPush:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA4E6CD5-DE44-41C0-8307-BDE6CF33F036"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Transition/DefaultPushTransiotion.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-animateTransitionLeftPush:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A577B30-C2FB-437A-AA85-1463BA373608"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Transition/DefaultPushTransiotion.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "-animateTransitionLeftPush:"
             landmarkType = "7">
          </BreakpointContent>

@@ -41,7 +41,7 @@
         while (toTransitionView.superview != nil) {
             toTransitionView = toTransitionView.superview;
         }
-        [containerView insertSubview:toTransitionView aboveSubview:toVC.view];
+        [containerView insertSubview:toTransitionView aboveSubview:toVC.view];//UIWindow加到了TransitionContainerView里了，所以crash
         CGRect startFrame = toTransitionView.frame;
         startFrame.origin.x = (-0.3) * containerView.bounds.size.width;
         toTransitionView.frame = startFrame;

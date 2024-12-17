@@ -22,7 +22,11 @@
     UIView *containerView = [transitionContext containerView]; // 获取转场的容器视图
     CGRect finalFrame = [transitionContext finalFrameForViewController:toVC]; // 获取目标视图控制器最终的frame
 
-    // 将目标视图添加到容器视图（UINavigationTransitionView）中
+    /*
+     将目标视图添加到容器视图（UIViewControllerWrapperView）中
+     如果是navigation push，那么containerView是UIViewControllerWrapperView。如果是UIViewController PresentView那么containerView是一个UITransitionView
+     present直接贴了一个UITransitionView在原来的UITransitionView的上面，原来的view都还在，和push不一样，push的话会把原来的view删除
+     */
     [containerView addSubview:toVC.view];
 
     // 设置目标视图的初始frame
@@ -37,6 +41,7 @@
         toVC.view.frame = finalFrame; // 将目标视图移动到最终frame
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:YES]; // 转场动画完成，调用 completeTransition
+        NSLog(@"completeTransition");
     }];
     
 //    想要tovc向左滑动，动画开始前，将tovc右移，即CGRectOffset(finalFrame, screenBounds.size.width, 0);
