@@ -12,7 +12,7 @@
 #import "ProfileMaskView.h"
 
 
-#define profileHeadHeight 300
+#define profileHeadHeight 100
 @interface OtherProfileViewController () <UIGestureRecognizerDelegate,UINavigationControllerDelegate>
 
 @property (nonatomic, strong) FeedTableViewController *tableVC;
@@ -41,9 +41,9 @@
     
     self.tableVC = [[FeedTableViewController alloc] initWithName:@"tableVC"];
     [self addChildViewController:self.tableVC];
-    self.tableVC.view.frame = CGRectMake(0, profileHeadHeight, self.view.frame.size.width, self.view.frame.size.height - profileHeadHeight);
+    self.tableVC.view.frame = CGRectMake(0, profileHeadHeight, self.view.frame.size.width, self.view.frame.size.height - profileHeadHeight*2);
     
-    self.maskView = [[ProfileMaskView alloc] initWithFrame:self.view.frame];
+    self.maskView = [[ProfileMaskView alloc] initWithFrame:CGRectMake(0, profileHeadHeight, self.view.frame.size.width, self.view.frame.size.height - profileHeadHeight*2)];
     [self.view addSubview:self.maskView];
 //    [self.view addSubview:self.tableVC.view];
     [self addPanGesture];
