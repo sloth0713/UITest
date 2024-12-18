@@ -10,6 +10,7 @@
 @interface TestTouchView ()
 
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 
 @end
 
@@ -22,8 +23,24 @@
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
         label.text = name;
         [self addSubview:label];
+        
+        self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+        self.tapGesture.delegate = self;
+        [self addGestureRecognizer:self.tapGesture];
     }
     return self;
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    NSLog(@"gestureRecognizerShouldBegin Recognizer %@",self.name);
+    //如果view和其父view的gestureRecognizerShouldBegin均为YES，最终tap回调会调用到最上层的子view的那个
+    return YES;
+}
+
+- (void)tap:(UITapGestureRecognizer *)tapGesture
+{
+    NSLog(@"tapGesture Recognizer %@",self.name);
 }
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event

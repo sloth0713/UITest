@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface TestTouchView : UIView
+@interface TestTouchView : UIView <UIGestureRecognizerDelegate>
 
 - (instancetype)initWithFrame:(CGRect)frame name:(NSString *)name;
 
