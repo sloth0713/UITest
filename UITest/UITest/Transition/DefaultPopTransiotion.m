@@ -97,7 +97,7 @@
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
-    UIViewController *toPresentedVC = toVC.presentedViewController;
+    UIViewController *toPresentedVC = toVC.presentedViewController;//如果是push动画，这里是nil。如果是presentvc，这里是当前的fromVC
     UIView *toTransitionView = nil;
     if (toPresentedVC) {
         toTransitionView = toPresentedVC.view;

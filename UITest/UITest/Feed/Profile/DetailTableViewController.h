@@ -8,6 +8,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface DetailTableViewController : UITableViewController
+@interface DetailTableViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @end

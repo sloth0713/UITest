@@ -45,7 +45,7 @@
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
-    //如果同级，会按照addSubView的顺序
+    //先父veiw，再子view，如果子view同级，会按照addSubView的顺序
     NSLog(@"进入%@_View---hitTest withEvent ---", self.name);
     UIView * view = [super hitTest:point withEvent:event];
     NSLog(@"离开%@_View--- hitTest withEvent ---hitTestView:%@", self.name,view);

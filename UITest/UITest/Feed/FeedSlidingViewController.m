@@ -102,7 +102,7 @@
         }
     }
     self.direction = scrollDirectionNone;
-    return NO;
+    return NO;//return NO，无效手动创建的gesture，留给scrolleView的gesture
     
 }
 

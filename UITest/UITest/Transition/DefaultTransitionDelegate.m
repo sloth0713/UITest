@@ -46,6 +46,18 @@
     }
 }
 
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    
+}
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    
+}
+
+
+#pragma mark - UIViewControllerTransitioningDelegate
+
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
 //    sourceController：profile， presentvc：tabbar 有点问题

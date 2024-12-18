@@ -87,38 +87,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F9AE786B-B8C2-47D8-8800-1B952F8FE228"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UITest/Feed/FeedSlidingScrollView.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "-gestureRecognizerShouldBegin:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2E8AE291-AD5B-4E89-9160-A3C71902988A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UITest/Feed/FeedSlidingScrollView.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "-gestureRecognizerShouldBegin:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "46DCD0C2-B5FA-4E2F-9359-E73404DAF562"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -193,22 +161,6 @@
             startingLineNumber = "33"
             endingLineNumber = "33"
             landmarkName = "-init"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6143C835-DDE2-47F4-AF9B-45F948A0F9B7"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UITest/Feed/FeedSlidingViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
-            landmarkName = "-gestureRecognizerShouldBegin:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1400,7 +1352,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A3755C36-5041-48D8-A6CD-54C8C5919F3F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UITest/Inbox/AnimationVC.m"
@@ -1432,7 +1384,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "59F6B0E8-300B-4CED-A49D-53A142E8C2D6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UITest/Inbox/AnimationVC.m"
@@ -1502,8 +1454,8 @@
             filePath = "UITest/Transition/DefaultTransitionDelegate.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "-animationControllerForPresentedController:presentingController:sourceController:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1518,8 +1470,8 @@
             filePath = "UITest/Transition/DefaultTransitionDelegate.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "-animationControllerForDismissedController:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1534,8 +1486,8 @@
             filePath = "UITest/Feed/Profile/DetailTableViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "-buttonClicked:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1585,22 +1537,6 @@
             startingLineNumber = "22"
             endingLineNumber = "22"
             landmarkName = "-animateTransitionLeftPush:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1522178B-6B79-439E-9CFB-967C652DBC40"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UITest/Transition/DefaultPopTransiotion.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "-startDefaultAnimationWithFromVC:toVC:fromContextProvider:toContextProvider:containerView:context:completionHandler:duration:transitionContext:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1713,6 +1649,54 @@
             startingLineNumber = "30"
             endingLineNumber = "30"
             landmarkName = "-animateTransitionLeftPush:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0C92E13F-8ACF-45D8-A96E-01304BC20614"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Transition/DefaultPopTransiotion.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "-startDefaultAnimationWithFromVC:toVC:fromContextProvider:toContextProvider:containerView:context:completionHandler:duration:transitionContext:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5AFC4156-5376-4A6B-B477-E28A600C648B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Transition/DefaultPopTransiotion.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "-animateTransitionPop:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "417559F8-E6AE-42CF-B35E-1A5F08517718"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UITest/Feed/Profile/DetailTableViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "-tap:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
