@@ -13,10 +13,11 @@
 #import "Paging/CustomPagingControllerAnimation.h"
 #import "Paging/CustomPagingControllerProtocol.h"
 
-#define cellCount 20
+#define cellCount 200
 
 #define viewWidth self.view.frame.size.width
-#define viewHeight self.view.frame.size.height
+#define viewHeight self.view.frame.size.height -200
+//#define viewHeight 100
 
 @interface FeedTableViewController ()
 @property (nonatomic, strong) UITableView *tableView;
@@ -57,20 +58,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    self.tableView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height*cellCount);
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, viewWidth, viewHeight)];
+    self.tableView.contentSize = CGSizeMake(self.view.frame.size.width, viewHeight*cellCount);
     self.tableView.pagingEnabled = !self.enbaleCustomPaging;
     if (self.enbaleCustomPaging){
 //        self.customPagingController = [[CustomPagingController alloc] initWithScrollView:self.tableView];
-        self.customPagingController = [[CustomPagingControllerAnimation alloc] initWithScrollView:self.tableView];
+        self.customPagingController = [[CustomPagingControllerAnimation alloc] initWithScrollView:self.tableView];//这个有绿屏问题
         self.customPagingController.animationDuration = 1;
     }
     
-    self.tableView.backgroundColor = [UIColor greenColor];
+    self.tableView.backgroundColor = [UIColor blackColor];
     self.tableView.dataSource = self;
+    
     self.tableView.delegate = self;
     //decelerationRate在tableView中是禁用的
-    self.tableView.decelerationRate = 0.0001;
+//    self.tableView.decelerationRate = 0.0001;
     [self.view addSubview:self.tableView];
 }
 
@@ -78,8 +80,19 @@
     NSLog(@"Button clicked!");
     [Responder.shareInstance.topVC.navigationController pushViewController:[[OtherProfileViewController alloc] init] animated:YES];
 }
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    long row = indexPath.row;
+    NSLog(@"willDisplayCell %ld",row);
+}
 
-- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath { 
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    long row = indexPath.row;
+    NSLog(@"didEndDisplayingCell %ld",row);
+}
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
     NSArray *colorArray = @[[UIColor grayColor], [UIColor redColor], [UIColor blueColor]];
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
@@ -96,7 +109,7 @@
 
     cell.contentView.backgroundColor = color;
     cell.textLabel.text = [NSString stringWithFormat:@"%@ : %ld",self.name,indexPath.row];
-    
+    NSLog(@"cellForRowAtIndexPath %ld",indexPath.row);
     return cell;
 }
 
@@ -106,7 +119,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return self.tableView.frame.size.height;
+    return viewHeight;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -50,12 +50,15 @@
 - (void)startCoreScrollAnimation {
     self.displayLinkTimer.paused = NO;
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self.scrollView setContentOffset:CGPointMake(self.endContentOffset.x, self.endContentOffset.y+300)];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.01 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self.scrollView setContentOffset:CGPointMake(self.endContentOffset.x, self.endContentOffset.y+300)];
+//    });
+//    用animateWithDuration实现指定时长的scrollView 的ContentOffset缓慢变化的动画
     
     [UIView animateWithDuration:self.animationDuration animations:^{
-        [self.scrollView setContentOffset:self.endContentOffset];
+        [self.scrollView setContentOffset:CGPointMake(self.endContentOffset.x, self.endContentOffset.y-0.26) animated:NO];
+        //iOS 17 0.25不行，0.26可以
+        //iOS 18 0.16不行，0.167可以
         self.scrollView.isCustomPaging = YES;
     }completion:^(BOOL finished) {
         if (finished) {
