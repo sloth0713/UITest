@@ -38,7 +38,9 @@
     MethodTest *test = [[MethodTest alloc] init];
     //[test runM]
     id testid = (id)test;
-    [testid performSelector:@selector(runMethod)];
+    SEL selector = @selector(runMethod:);
+    NSString *myParameter = @"myParameter!";
+    [testid performSelector:selector withObject:myParameter];
     [[ThreadTest alloc] init];
     
 //    [self startMonitor];

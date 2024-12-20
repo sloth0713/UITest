@@ -19,9 +19,16 @@
 
 #pragma mark - 消息转发
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
-    //方法签名，表示方法需要两个参数。第一个参数是一个对象类型，第二个参数是一个选择器（常见用于方法的动态调用）
+    /*
+     方法签名
+     v是返回类型，可改
+     @是self类型，固定
+     :是cmd类型，固定
+     @是第一个参数的类型，可改
+     */
     NSMethodSignature *method = [NSMethodSignature signatureWithObjCTypes:"v@:@"];
     return method;
+//    return [NSObject instanceMethodSignatureForSelector:@selector(init)];
 }
 
 /*
@@ -48,18 +55,18 @@
 
 @implementation MethodTestReplace
 
-- (void)runMethod
+- (void)runMethod:(NSString *)param
 {
-    NSLog(@"MethodTestReplace runMethod");
+    NSLog(@"MethodTestReplace runMethod param : %@",param);
 }
 
 @end
 
 @implementation MethodTestForward
 
-- (void)runMethod
+- (void)runMethod:(NSString *)param
 {
-    NSLog(@"MethodTestForward runMethod");
+    NSLog(@"MethodTestForward runMethod param : %@",param);
 }
 
 @end
