@@ -11,6 +11,7 @@
 #import "Fluency/RunLoopFluencyMonitor.h"
 #import "Fluency/DisplayLinkFluencyMonitor.h"
 #import "Thread/ThreadTest.h"
+#import "Method/MethodTest.h"
 
 @interface SceneDelegate ()
 
@@ -34,7 +35,12 @@
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
     
+    MethodTest *test = [[MethodTest alloc] init];
+    //[test runM]
+    id testid = (id)test;
+    [testid performSelector:@selector(runMethod)];
     [[ThreadTest alloc] init];
+    
 //    [self startMonitor];
 }
 

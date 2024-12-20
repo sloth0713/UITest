@@ -16,7 +16,7 @@
 #define cellCount 200
 
 #define viewWidth self.view.frame.size.width
-#define viewHeight self.view.frame.size.height -200
+#define viewHeight self.view.frame.size.height
 //#define viewHeight 100
 
 @interface FeedTableViewController ()
