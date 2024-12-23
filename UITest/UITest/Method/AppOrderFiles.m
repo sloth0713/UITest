@@ -9,6 +9,14 @@
 #import <libkern/OSAtomicQueue.h>
 #import <pthread.h>
 
+
+/*
+ 编译期插桩，利用LLVM编译架构的other c flags参数实现插桩。他会在每个函数二进制末尾自动插桩。
+ __sanitizer_cov_trace_pc_guard_init会统计所有被插桩的guard函数段。
+ guard原来的值是不确定的uint32_t数，我们给他赋值从1～n。
+ 只需要实现__sanitizer_cov_trace_pc_guard，就会在函数调用结束后自动调用该方法
+ */
+
 static OSQueueHead queue = OS_ATOMIC_QUEUE_INIT;
 
 static BOOL collectFinished = NO;
@@ -24,12 +32,19 @@ typedef struct {
 void __sanitizer_cov_trace_pc_guard_init(uint32_t *start,
                                          uint32_t *stop) {
     static uint32_t N;  // Counter for the guards.
-    if (start == stop || *start) return;  // Initialize only once.
-    printf("INIT: %p %p\n", start, stop);
+    if (start == stop) {
+        return;
+    }// Initialize only once.
+    if (*start) {
+        return;
+    }
     for (uint32_t *x = start; x < stop; x++)
-        *x = ++N;  // Guards should start from 1.
-    
-    printf("guards count %d",N);
+        printf("xxx %d \n", *x);
+//    printf("INIT: %p %p\n", start, stop);
+//    for (uint32_t *x = start; x < stop; x++)
+//        *x = ++N;  // Guards should start from 1.
+//    
+//    printf("guards count %d",N);
 }
 
 // This callback is inserted by the compiler on every edge in the
@@ -40,16 +55,19 @@ void __sanitizer_cov_trace_pc_guard_init(uint32_t *start,
 // But for large functions it will emit a simple call:
 //    __sanitizer_cov_trace_pc_guard(guard);
 void __sanitizer_cov_trace_pc_guard(uint32_t *guard) {
-    if (collectFinished || !*guard) {
+    if (collectFinished) {
         return;
     }
+//    if (!*guard) {
+//        return;
+//    }
     // If you set *guard to 0 this code will not be called again for this edge.
     // Now you can get the PC and do whatever you want:
     //   store it somewhere or symbolize it and print right away.
     // The values of `*guard` are as you set them in
     // __sanitizer_cov_trace_pc_guard_init and so you can make them consecutive
     // and use them to dereference an array or a bit vector.
-    *guard = 0;
+    *guard = 0;//防止重复进入同一个方法
     void *PC = __builtin_return_address(0);
     PCNode *node = malloc(sizeof(PCNode));
     *node = (PCNode){PC, NULL};
