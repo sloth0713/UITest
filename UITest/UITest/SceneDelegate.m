@@ -12,6 +12,7 @@
 #import "Fluency/DisplayLinkFluencyMonitor.h"
 #import "Thread/ThreadTest.h"
 #import "Method/MethodTest.h"
+#import "Method/AppOrderFiles.h"
 
 @interface SceneDelegate ()
 
@@ -42,7 +43,9 @@
     NSString *myParameter = @"myParameter!";
     [testid performSelector:selector withObject:myParameter];
     [[ThreadTest alloc] init];
-    
+    AppOrderFiles(^(NSString *orderFilePath) {
+        NSLog(@"fdsa");
+    });
 //    [self startMonitor];
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0F97D52D19371500E6477B /* order.order in Resources */ = {isa = PBXBuildFile; fileRef = 2B0F97D42D19371500E6477B /* order.order */; };
 		2B12993E2CFEB7460003F3CF /* ThreadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B12993D2CFEB7460003F3CF /* ThreadTest.m */; };
 		2B2E9EC12CCB6AC100DFC9ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9EC02CCB6AC100DFC9ED /* AppDelegate.m */; };
 		2B2E9EC42CCB6AC100DFC9ED /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9EC32CCB6AC100DFC9ED /* SceneDelegate.m */; };
@@ -47,6 +48,7 @@
 		2BB78ECA2CD38DCA0056DBB9 /* TestTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB78EC92CD38DCA0056DBB9 /* TestTouchView.m */; };
 		2BB797FD2CDA23280056DBB9 /* Responder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB797FC2CDA23280056DBB9 /* Responder.m */; };
 		2BCA7C142D151C2200FD487A /* MethodTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCA7C132D151C2200FD487A /* MethodTest.m */; };
+		2BCA7C172D156DD300FD487A /* AppOrderFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCA7C162D156DD300FD487A /* AppOrderFiles.m */; };
 		2BE5E3982CD357E700651685 /* UIGestureRecognizer+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5E3972CD357E700651685 /* UIGestureRecognizer+Test.m */; };
 		2BE5E39F2CD3617100651685 /* ProfileMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5E39E2CD3617100651685 /* ProfileMaskView.m */; };
 		2BF063842CD3896B00A2B3F1 /* FriendsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF063832CD3896B00A2B3F1 /* FriendsVC.m */; };
@@ -70,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B0F97D42D19371500E6477B /* order.order */ = {isa = PBXFileReference; lastKnownFileType = text; path = order.order; sourceTree = "<group>"; };
 		2B12993C2CFEB7460003F3CF /* ThreadTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadTest.h; sourceTree = "<group>"; };
 		2B12993D2CFEB7460003F3CF /* ThreadTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadTest.m; sourceTree = "<group>"; };
 		2B2E9EBC2CCB6AC100DFC9ED /* UITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +152,8 @@
 		2BB797FC2CDA23280056DBB9 /* Responder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Responder.m; sourceTree = "<group>"; };
 		2BCA7C122D151C2200FD487A /* MethodTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodTest.h; sourceTree = "<group>"; };
 		2BCA7C132D151C2200FD487A /* MethodTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodTest.m; sourceTree = "<group>"; };
+		2BCA7C152D156DD300FD487A /* AppOrderFiles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppOrderFiles.h; sourceTree = "<group>"; };
+		2BCA7C162D156DD300FD487A /* AppOrderFiles.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppOrderFiles.m; sourceTree = "<group>"; };
 		2BE5E3962CD357E700651685 /* UIGestureRecognizer+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Test.h"; sourceTree = "<group>"; };
 		2BE5E3972CD357E700651685 /* UIGestureRecognizer+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Test.m"; sourceTree = "<group>"; };
 		2BE5E39D2CD3617100651685 /* ProfileMaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileMaskView.h; sourceTree = "<group>"; };
@@ -194,6 +199,7 @@
 		2B2E9EB32CCB6AC100DFC9ED = {
 			isa = PBXGroup;
 			children = (
+				2B0F97D42D19371500E6477B /* order.order */,
 				2B2E9EBE2CCB6AC100DFC9ED /* UITest */,
 				2B2E9EDA2CCB6AC200DFC9ED /* UITestTests */,
 				2B2E9EE42CCB6AC200DFC9ED /* UITestUITests */,
@@ -386,6 +392,8 @@
 			children = (
 				2BCA7C122D151C2200FD487A /* MethodTest.h */,
 				2BCA7C132D151C2200FD487A /* MethodTest.m */,
+				2BCA7C152D156DD300FD487A /* AppOrderFiles.h */,
+				2BCA7C162D156DD300FD487A /* AppOrderFiles.m */,
 			);
 			path = Method;
 			sourceTree = "<group>";
@@ -504,6 +512,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B0F97D52D19371500E6477B /* order.order in Resources */,
 				2B2E9ECF2CCB6AC200DFC9ED /* LaunchScreen.storyboard in Resources */,
 				2B2E9ECC2CCB6AC200DFC9ED /* Assets.xcassets in Resources */,
 			);
@@ -541,6 +550,7 @@
 				2B456A262D0AFC0D00E1816C /* UIViewController+Transition.m in Sources */,
 				2B12993E2CFEB7460003F3CF /* ThreadTest.m in Sources */,
 				2B57A5432CFF2608006883B6 /* CollectionViewCell2.m in Sources */,
+				2BCA7C172D156DD300FD487A /* AppOrderFiles.m in Sources */,
 				2BE5E3982CD357E700651685 /* UIGestureRecognizer+Test.m in Sources */,
 				2BB115912CF5CE43008F6D40 /* DisplayLinkFluencyMonitor.m in Sources */,
 				2B456A232D0AF9CD00E1816C /* DetailTableViewController.m in Sources */,
@@ -672,6 +682,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				ORDER_FILE = ./order.order;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -726,6 +737,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ORDER_FILE = ./order.order;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -751,6 +763,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_CFLAGS = "-fsanitize-coverage=func,trace-pc-guard";
 				PRODUCT_BUNDLE_IDENTIFIER = "yjx-xcdebug.UITest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -778,6 +791,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_CFLAGS = "-fsanitize-coverage=func,trace-pc-guard";
 				PRODUCT_BUNDLE_IDENTIFIER = "yjx-xcdebug.UITest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
