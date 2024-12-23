@@ -13,6 +13,8 @@
 #import "Thread/ThreadTest.h"
 #import "Method/MethodTest.h"
 #import "Method/AppOrderFiles.h"
+#import <mach/mach.h>
+#import <sys/sysctl.h>
 
 @interface SceneDelegate ()
 
@@ -36,17 +38,43 @@
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
     
+    [self methodForwardTest];
+    [self threadTest];
+    [self orderfileTest];
+    [self pageInCollection];
+//    [self startMonitor];
+    
+    NSLog(@"willConnectToSession");
+}
+
+- (void)pageInCollection
+{
+    task_events_info_data_t eventsInfo;
+    NSDictionary *taskFaults = @{};
+    kern_return_t kr = task_info(mach_task_self(), TASK_EVENTS_INFO, (task_info_t)&eventsInfo, &(mach_msg_type_number_t){ TASK_EVENTS_INFO_COUNT });
+    int pageInCount = eventsInfo.pageins;
+    NSLog(@"pageInCollection");
+}
+
+- (void)threadTest
+{
+    [[ThreadTest alloc] init];
+}
+
+- (void)orderfileTest
+{
+    AppOrderFiles(^(NSString *orderFilePath) {
+        NSLog(@"fdsa");
+    });
+}
+
+- (void)methodForwardTest
+{
     MethodTest *test = [[MethodTest alloc] init];
-    //[test runM]
     id testid = (id)test;
     SEL selector = @selector(runMethod:);
     NSString *myParameter = @"myParameter!";
     [testid performSelector:selector withObject:myParameter];
-    [[ThreadTest alloc] init];
-    AppOrderFiles(^(NSString *orderFilePath) {
-        NSLog(@"fdsa");
-    });
-//    [self startMonitor];
 }
 
 - (void)startMonitor
