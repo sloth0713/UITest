@@ -29,6 +29,9 @@ typedef struct {
 // The guards are [start, stop).
 // This function will be called at least once per DSO and may be called
 // more than once with the same values of start/stop.
+// start -> sancov.module_ctor_trace_pc_guard () 每个符号都会调用一次，参数都是第一个符号（start）到最后一只符号的地址（stop）
+// 所以可以设置条件使得只调用一次
+
 void __sanitizer_cov_trace_pc_guard_init(uint32_t *start,
                                          uint32_t *stop) {
     static uint32_t N;  // Counter for the guards.
@@ -38,9 +41,11 @@ void __sanitizer_cov_trace_pc_guard_init(uint32_t *start,
     if (*start) {
         return;
     }
-    for (uint32_t *x = start; x < stop; x++)
-        printf("xxx %d \n", *x);
-//    printf("INIT: %p %p\n", start, stop);
+    
+//    for (uint32_t *x = start; x < stop; x++)
+//        printf("xxx %d \n", *x);
+    printf("INIT: %p %p\n", start, stop);
+    //如果不赋值，那么Guard就是0
 //    for (uint32_t *x = start; x < stop; x++)
 //        *x = ++N;  // Guards should start from 1.
 //    
