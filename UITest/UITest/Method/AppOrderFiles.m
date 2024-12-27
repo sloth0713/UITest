@@ -13,7 +13,7 @@
 /*
  编译期插桩，利用LLVM编译架构的other c flags参数实现插桩。他会在每个函数二进制末尾自动插桩。
  __sanitizer_cov_trace_pc_guard_init会统计所有被插桩的guard函数段。
- guard原来的值是不确定的uint32_t数，我们给他赋值从1～n。
+ guard原来的值是0，我们给他赋值从1～n。
  只需要实现__sanitizer_cov_trace_pc_guard，就会在函数调用结束后自动调用该方法
  */
 

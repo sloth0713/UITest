@@ -15,6 +15,8 @@
 #import "Method/AppOrderFiles.h"
 #import <mach/mach.h>
 #import <sys/sysctl.h>
+#import "DonateIntent.h"
+#import <CoreSpotlight/CoreSpotlight.h>
 
 @interface SceneDelegate ()
 
@@ -42,9 +44,82 @@
     [self threadTest];
     [self orderfileTest];
     [self pageInCollection];
-//    [self startMonitor];
+    [self startMonitor];
+    int loop = 10;
+    for (int i = 0; i<loop; i++) {
+        [self DonateIntet];
+//        [self deleteSiriDonate];
+        
+        NSLog(@"DonateIntet");
+    }
+    
     
     NSLog(@"willConnectToSession");
+}
+
+- (void)deleteSiriDonate
+{
+    [NSUserActivity deleteAllSavedUserActivitiesWithCompletionHandler:^(){
+        NSLog(@"All siri suggestion cache has been cleaned");
+    }];
+
+    [INInteraction deleteAllInteractionsWithCompletion:^(NSError *error){
+        if (!error){
+            NSLog(@"All siri suggestion cache has been cleaned");
+        }
+    }];
+}
+
+- (void)DonateIntet
+{
+    DonateIntent *intent = [[DonateIntent alloc] init];
+    intent.title = @"DonateIntent title";
+    intent.content = @"DonateIntent content";
+    if (intent != nil) {
+
+        NSString *type = @"intent donate useractivity";
+        NSUserActivity *intentUserActivity = [[NSUserActivity alloc] initWithActivityType:type];
+        intentUserActivity.eligibleForSearch = YES;
+        intentUserActivity.eligibleForPrediction = YES;
+        intentUserActivity.eligibleForHandoff = NO;
+        intentUserActivity.persistentIdentifier = type;
+        CSSearchableItemAttributeSet *attributes = [[CSSearchableItemAttributeSet alloc] init];
+        attributes.contentDescription = @"DonateIntent content useractivity";
+        intentUserActivity.contentAttributeSet = attributes;
+        intentUserActivity.title = @"DonateIntent title useractivity";
+        intentUserActivity.userInfo = @{@"a":@(1)};
+        NSDate *expirationDate = [[NSDate date] initWithTimeIntervalSinceNow: 24*60*60 * 7];
+        intentUserActivity.expirationDate = expirationDate;
+        [intentUserActivity becomeCurrent];
+        
+        
+        INIntentResponse *response = [[INIntentResponse alloc] init];
+        response.userActivity = intentUserActivity;
+        INInteraction *action = [[INInteraction alloc] initWithIntent:intent response:response];
+        action.identifier = @"intent donate";
+        [action donateInteractionWithCompletion:^(NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"error");
+            }else{
+                NSLog(@"success");
+            }
+        }];
+        
+    }
+    
+//    NSUserActivity *userActivity = [[NSUserActivity alloc] initWithActivityType:@"userActivity donate"];
+//    userActivity.eligibleForSearch = YES;
+//    userActivity.eligibleForHandoff = NO;
+//
+//
+//    userActivity.eligibleForPrediction = YES;
+//    userActivity.persistentIdentifier = @"userActivity donate";
+//    CSSearchableItemAttributeSet *attributes = [[CSSearchableItemAttributeSet alloc] init];
+//    attributes.contentDescription = @"useractivity content";
+//    userActivity.contentAttributeSet = attributes;
+//    userActivity.title = @"useractivity title";
+//    [userActivity becomeCurrent];
+//    
 }
 
 - (void)pageInCollection
@@ -80,7 +155,7 @@
 - (void)startMonitor
 {
     
-    [RunLoopFluencyMonitor shareMonitor];
+//    [RunLoopFluencyMonitor shareMonitor];
     [DisplayLinkFluencyMonitor shareMonitor];
 }
 

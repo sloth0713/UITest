@@ -15,6 +15,7 @@
 @property (nonatomic,assign) int count;
 @property (nonatomic,assign) CFRunLoopObserverRef runLoopObserver;
 @property (nonatomic,assign) CFRunLoopActivity runLoopActivity;
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -37,6 +38,20 @@
     self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(handleDisplayLink:)];
     [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
 //        NSRunLoopCommonModes = NSDefaultRunLoopMode+UITrackingRunLoopMode
+    
+    self.timer  = [[NSTimer alloc] initWithFireDate:[NSDate now] interval:5 repeats:YES block:^(NSTimer * _Nonnull timer) {
+
+        NSLog(@"Start long running task");
+//        for (int i = 0; i < 100000000; i++) {
+//            // 长时间循环操作模拟耗时
+//        }
+        [NSThread sleepForTimeInterval:0.5];
+        NSLog(@"End long running task");
+        
+    }];
+    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
+    [self.timer fire];
+
 }
 
 
@@ -61,7 +76,7 @@
         self.count = 0;
         return;
     }else{
-        NSLog(@"normal single display link duartion : %lf", interval);
+//        NSLog(@"normal single display link duartion : %lf", interval);
     }
     
     
