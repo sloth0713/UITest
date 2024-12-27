@@ -33,7 +33,6 @@
 		2B456A232D0AF9CD00E1816C /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B456A222D0AF9CD00E1816C /* DetailTableViewController.m */; };
 		2B456A262D0AFC0D00E1816C /* UIViewController+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B456A252D0AFC0D00E1816C /* UIViewController+Transition.m */; };
 		2B5017C72D1980520076C4BB /* DonateIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2B5017C62D1980520076C4BB /* DonateIntent.intentdefinition */; };
-		2B501C452D1E5AF60076C4BB /* FluencyBlocker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B501C442D1E5AF60076C4BB /* FluencyBlocker.m */; };
 		2B57A53C2CFF1F62006883B6 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B57A53B2CFF1F62006883B6 /* CollectionViewCell.m */; };
 		2B57A5402CFF25FD006883B6 /* CollectionViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B57A53F2CFF25FD006883B6 /* CollectionViewCell1.m */; };
 		2B57A5432CFF2608006883B6 /* CollectionViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B57A5422CFF2608006883B6 /* CollectionViewCell2.m */; };
@@ -122,8 +121,6 @@
 		2B456A242D0AFC0D00E1816C /* UIViewController+Transition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Transition.h"; sourceTree = "<group>"; };
 		2B456A252D0AFC0D00E1816C /* UIViewController+Transition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Transition.m"; sourceTree = "<group>"; };
 		2B5017C62D1980520076C4BB /* DonateIntent.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = DonateIntent.intentdefinition; sourceTree = "<group>"; };
-		2B501C432D1E5AF60076C4BB /* FluencyBlocker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FluencyBlocker.h; sourceTree = "<group>"; };
-		2B501C442D1E5AF60076C4BB /* FluencyBlocker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FluencyBlocker.m; sourceTree = "<group>"; };
 		2B57A53A2CFF1F62006883B6 /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		2B57A53B2CFF1F62006883B6 /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		2B57A53E2CFF25FD006883B6 /* CollectionViewCell1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell1.h; sourceTree = "<group>"; };
@@ -372,8 +369,6 @@
 				2BB1158D2CF5BD03008F6D40 /* RunLoopFluencyMonitor.m */,
 				2BB1158F2CF5CE43008F6D40 /* DisplayLinkFluencyMonitor.h */,
 				2BB115902CF5CE43008F6D40 /* DisplayLinkFluencyMonitor.m */,
-				2B501C432D1E5AF60076C4BB /* FluencyBlocker.h */,
-				2B501C442D1E5AF60076C4BB /* FluencyBlocker.m */,
 			);
 			path = Fluency;
 			sourceTree = "<group>";
@@ -570,7 +565,6 @@
 				2BCA7C172D156DD300FD487A /* AppOrderFiles.m in Sources */,
 				2BE5E3982CD357E700651685 /* UIGestureRecognizer+Test.m in Sources */,
 				2BB115912CF5CE43008F6D40 /* DisplayLinkFluencyMonitor.m in Sources */,
-				2B501C452D1E5AF60076C4BB /* FluencyBlocker.m in Sources */,
 				2B456A232D0AF9CD00E1816C /* DetailTableViewController.m in Sources */,
 				2BB115942CF6F2DD008F6D40 /* AnimationVC.m in Sources */,
 				2B57A5402CFF25FD006883B6 /* CollectionViewCell1.m in Sources */,

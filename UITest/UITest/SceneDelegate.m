@@ -44,7 +44,7 @@
     [self threadTest];
     [self orderfileTest];
     [self pageInCollection];
-    [self startMonitor];
+//    [self startMonitor];
     int loop = 10;
     for (int i = 0; i<loop; i++) {
         [self DonateIntet];
