@@ -20,6 +20,7 @@
 @property (nonatomic, assign) scrollDirection direction;
 
 @property (nonatomic, strong) ProfileMaskView *maskView;
+@property (nonatomic, assign) NSTimeInterval initInterval;
 
 @end
 
@@ -28,25 +29,29 @@
 - (instancetype)init
 {
     if (self = [super init]){
-        
+        self.initInterval = [[NSDate now] timeIntervalSince1970];
     }
     return self;
 }
 
-- (void)viewDidLoad
+//UINavigationController StartCustomTransition调用 [UIViewController view]会调用到这里
+
+- (void)viewDidLoad//动画之前
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
     self.view.frame = CGRectMake(0, 0, self.navigationController.view.frame.size.width, self.navigationController.view.frame.size.height);
     
-    self.tableVC = [[FeedTableViewController alloc] initWithName:@"tableVC"];
+    self.tableVC = [[FeedTableViewController alloc] initWithName:@"profile_tableVC"];
     [self addChildViewController:self.tableVC];
     self.tableVC.view.frame = CGRectMake(0, profileHeadHeight, self.view.frame.size.width, self.view.frame.size.height - profileHeadHeight*2);
     
     self.maskView = [[ProfileMaskView alloc] initWithFrame:CGRectMake(0, profileHeadHeight, self.view.frame.size.width, self.view.frame.size.height - profileHeadHeight*2)];
-    [self.view addSubview:self.maskView];
-//    [self.view addSubview:self.tableVC.view];
+//    [self.view addSubview:self.maskView];
+    [self.view addSubview:self.tableVC.view];
     [self addPanGesture];
+    NSTimeInterval init_to_viewDidLoad = ([[NSDate now] timeIntervalSince1970] - self.initInterval) *1000;
+    NSLog(@"init_to_viewDidLoad %lf",init_to_viewDidLoad);
 }
 
 - (void)addPanGesture
@@ -106,29 +111,20 @@
 
 #pragma mark - VC life cycle
 
+/*
+ 顺序
+ viewDidLoad
+ viewWillAppear
+ viewWillLayoutSubviews
+ viewDidLayoutSubviews
+ ------动画------
+ viewDidAppear
+ 
+ */
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     NSLog(@"viewWillAppear");
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    NSLog(@"viewDidAppear");
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    NSLog(@"viewWillDisappear");
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    NSLog(@"viewDidDisappear");
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewWillLayoutSubviews
@@ -145,4 +141,26 @@
     [super viewDidLayoutSubviews];
     NSLog(@"viewDidLayoutSubviews");
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"viewDidAppear");
+}
+
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    NSLog(@"viewWillDisappear");
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    NSLog(@"viewDidDisappear");
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 @end

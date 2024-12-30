@@ -40,18 +40,18 @@
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
     
-    [self methodForwardTest];
-    [self threadTest];
-    [self orderfileTest];
-    [self pageInCollection];
+//    [self methodForwardTest];
+//    [self threadTest];
+//    [self orderfileTest];
+//    [self pageInCollection];
 //    [self startMonitor];
-    int loop = 10;
-    for (int i = 0; i<loop; i++) {
-        [self DonateIntet];
+//    int loop = 10;
+//    for (int i = 0; i<loop; i++) {
+//        [self DonateIntet];
 //        [self deleteSiriDonate];
         
-        NSLog(@"DonateIntet");
-    }
+//        NSLog(@"DonateIntet");
+//    }
     
     
     NSLog(@"willConnectToSession");

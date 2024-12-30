@@ -83,13 +83,17 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     long row = indexPath.row;
-    NSLog(@"willDisplayCell %ld",row);
+    if ([self.name isEqualToString:@"profile_tableVC"]) {
+        NSLog(@"willDisplayCell %ld",row);
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     long row = indexPath.row;
-    NSLog(@"didEndDisplayingCell %ld",row);
+    if ([self.name isEqualToString:@"profile_tableVC"]) {
+        NSLog(@"didEndDisplayingCell %ld",row);
+    }
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
