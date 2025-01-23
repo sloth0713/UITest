@@ -27,7 +27,12 @@
      如果是navigation push，那么containerView是UIViewControllerWrapperView。如果是UIViewController PresentView那么containerView是一个UITransitionView
      present直接贴了一个UITransitionView在原来的UITransitionView的上面，原来的view都还在，和push不一样，push的话会把原来的view删除
      */
-    [containerView addSubview:toVC.view];
+    [containerView addSubview:toVC.view];//会调用到didMoveFromWindow
+    
+//    UIView *emptyContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, containerView.frame.size.width, containerView.frame.size.height)];
+//    [emptyContainerView addSubview:fromVC.view];
+    
+//    UIView *view= fromVC.view;
 
     // 设置目标视图的初始frame
     CGRect screenBounds = [[UIScreen mainScreen] bounds];

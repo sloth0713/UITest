@@ -39,6 +39,7 @@
 		2B57A5462CFF2616006883B6 /* CollectionViewCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B57A5452CFF2616006883B6 /* CollectionViewCell3.m */; };
 		2B57A54A2D002C48006883B6 /* CustomPagingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B57A5492D002C48006883B6 /* CustomPagingController.m */; };
 		2B57A54D2D00552F006883B6 /* CustomPagingControllerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B57A54C2D00552F006883B6 /* CustomPagingControllerAnimation.m */; };
+		2B9B5E232D23AF70005A3B20 /* UIView+hook.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9B5E222D23AF70005A3B20 /* UIView+hook.m */; };
 		2BB1158A2CF59B5C008F6D40 /* InboxVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB115892CF59B5C008F6D40 /* InboxVC.m */; };
 		2BB1158E2CF5BD03008F6D40 /* RunLoopFluencyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1158D2CF5BD03008F6D40 /* RunLoopFluencyMonitor.m */; };
 		2BB115912CF5CE43008F6D40 /* DisplayLinkFluencyMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB115902CF5CE43008F6D40 /* DisplayLinkFluencyMonitor.m */; };
@@ -134,6 +135,8 @@
 		2B57A54B2D00552F006883B6 /* CustomPagingControllerAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPagingControllerAnimation.h; sourceTree = "<group>"; };
 		2B57A54C2D00552F006883B6 /* CustomPagingControllerAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomPagingControllerAnimation.m; sourceTree = "<group>"; };
 		2B57A54E2D0057A4006883B6 /* CustomPagingControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPagingControllerProtocol.h; sourceTree = "<group>"; };
+		2B9B5E212D23AF70005A3B20 /* UIView+hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+hook.h"; sourceTree = "<group>"; };
+		2B9B5E222D23AF70005A3B20 /* UIView+hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+hook.m"; sourceTree = "<group>"; };
 		2BB115882CF59B5C008F6D40 /* InboxVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InboxVC.h; sourceTree = "<group>"; };
 		2BB115892CF59B5C008F6D40 /* InboxVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InboxVC.m; sourceTree = "<group>"; };
 		2BB1158C2CF5BD03008F6D40 /* RunLoopFluencyMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopFluencyMonitor.h; sourceTree = "<group>"; };
@@ -313,6 +316,8 @@
 				2BE5E3972CD357E700651685 /* UIGestureRecognizer+Test.m */,
 				2B456A242D0AFC0D00E1816C /* UIViewController+Transition.h */,
 				2B456A252D0AFC0D00E1816C /* UIViewController+Transition.m */,
+				2B9B5E212D23AF70005A3B20 /* UIView+hook.h */,
+				2B9B5E222D23AF70005A3B20 /* UIView+hook.m */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -582,6 +587,7 @@
 				2B2E9ED22CCB6AC200DFC9ED /* main.m in Sources */,
 				2BB1159B2CF6F84E008F6D40 /* MyLayout.m in Sources */,
 				2B2E9F0D2CCB821900DFC9ED /* UINavigationController+Transition.m in Sources */,
+				2B9B5E232D23AF70005A3B20 /* UIView+hook.m in Sources */,
 				2B57A54D2D00552F006883B6 /* CustomPagingControllerAnimation.m in Sources */,
 				2B2E9F102CCB90C500DFC9ED /* Feed2ProfileTransition.m in Sources */,
 				2B57A54A2D002C48006883B6 /* CustomPagingController.m in Sources */,

@@ -10,6 +10,7 @@
 #import "../../Transition/TransitionManager.h"
 #import "../FullScreenPopTransition.h"
 #import "ProfileMaskView.h"
+#import <os/signpost.h>
 
 
 #define profileHeadHeight 100
@@ -26,10 +27,17 @@
 
 @implementation OtherProfileViewController
 
+static os_log_t _logger;
+static os_signpost_id_t _logId;
+
 - (instancetype)init
 {
+    _logger = os_log_create("BootLoader", "performance");
+    _logId = os_signpost_id_generate(_logger);
+    os_signpost_interval_begin(_logger,_logId,"Main","%{public}s","init_to_viewDidLoad");
     if (self = [super init]){
         self.initInterval = [[NSDate now] timeIntervalSince1970];
+        NSLog(@"initOtherProfileViewController");
     }
     return self;
 }
@@ -50,8 +58,6 @@
 //    [self.view addSubview:self.maskView];
     [self.view addSubview:self.tableVC.view];
     [self addPanGesture];
-    NSTimeInterval init_to_viewDidLoad = ([[NSDate now] timeIntervalSince1970] - self.initInterval) *1000;
-    NSLog(@"init_to_viewDidLoad %lf",init_to_viewDidLoad);
 }
 
 - (void)addPanGesture
@@ -140,6 +146,10 @@
 //    [NSThread sleepForTimeInterval:5];
     [super viewDidLayoutSubviews];
     NSLog(@"viewDidLayoutSubviews");
+    
+    NSTimeInterval init_to_viewDidLoad = ([[NSDate now] timeIntervalSince1970] - self.initInterval) *1000;
+    NSLog(@"init_to_viewDidLoad OtherProfileViewController %lf",init_to_viewDidLoad);
+    os_signpost_interval_end(_logger,_logId,"Main","%{public}s","init_to_viewDidLoad");
 }
 
 - (void)viewDidAppear:(BOOL)animated {

@@ -12,7 +12,7 @@
 @implementation UIViewController (Transition)
 +(void)hookDelegate
 {
-    BOOL customVCTransition = YES;
+    BOOL customVCTransition = NO;
     if (!customVCTransition) return;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

@@ -74,6 +74,52 @@
     //decelerationRate在tableView中是禁用的
 //    self.tableView.decelerationRate = 0.0001;
     [self.view addSubview:self.tableView];
+    
+//    for (int i=0; i<1000; i++) {
+//        [self addLayout];
+//    }
+}
+
+- (void)addLayout
+{
+    UIView *parentView = [[UIView alloc] initWithFrame:CGRectMake(50, 100, 300, 300)];
+    parentView.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:parentView];
+
+    // 创建子视图1
+    UIView *childView1 = [[UIView alloc] initWithFrame:CGRectMake(20, 20, 100, 100)];
+    childView1.backgroundColor = [UIColor blueColor];
+    childView1.translatesAutoresizingMaskIntoConstraints = NO;
+    [parentView addSubview:childView1];
+
+    // 创建子视图2
+    UIView *childView2 = [[UIView alloc] initWithFrame:CGRectMake(50, 60, 80, 120)];
+    childView2.backgroundColor = [UIColor redColor];
+    childView2.translatesAutoresizingMaskIntoConstraints = NO;
+    [parentView addSubview:childView2];
+
+    // 设置子视图之间的复杂约束
+    NSLayoutConstraint *constraint1 = [NSLayoutConstraint constraintWithItem:childView1 attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:parentView attribute:NSLayoutAttributeLeading multiplier:1.0 constant:20];
+    [parentView addConstraint:constraint1];
+
+    NSLayoutConstraint *constraint2 = [NSLayoutConstraint constraintWithItem:childView1 attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:parentView attribute:NSLayoutAttributeTop multiplier:1.0 constant:20];
+    [parentView addConstraint:constraint2];
+
+    NSLayoutConstraint *constraint3 = [NSLayoutConstraint constraintWithItem:childView2 attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:parentView attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
+    [parentView addConstraint:constraint3];
+
+    NSLayoutConstraint *constraint4 = [NSLayoutConstraint constraintWithItem:childView2 attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:parentView attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
+    [parentView addConstraint:constraint4];
+}
+
+- (void)viewWillLayoutSubviews
+{
+    NSLog(@"viewWillLayoutSubviews");
+}
+
+- (void)viewDidLayoutSubviews
+{
+    NSLog(@"viewDidLayoutSubviews");
 }
 
 - (void)buttonClicked:(UIButton *)sender {
