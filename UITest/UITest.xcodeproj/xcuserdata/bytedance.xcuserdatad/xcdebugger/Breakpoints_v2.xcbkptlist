@@ -1948,8 +1948,8 @@
             filePath = "UITest/SceneDelegate.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
             landmarkName = "-playMediaIntentTest"
             landmarkType = "7">
          </BreakpointContent>
@@ -1964,8 +1964,8 @@
             filePath = "UITest/SceneDelegate.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
             landmarkName = "-playMediaIntentTest"
             landmarkType = "7">
          </BreakpointContent>
@@ -1996,8 +1996,8 @@
             filePath = "UITest/SceneDelegate.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "266"
-            endingLineNumber = "266"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
             landmarkName = "-DonateIntet"
             landmarkType = "7">
          </BreakpointContent>
@@ -2028,8 +2028,8 @@
             filePath = "UITest/SceneDelegate.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "275"
-            endingLineNumber = "275"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
             landmarkName = "-DonateIntet"
             landmarkType = "7">
          </BreakpointContent>
@@ -2044,8 +2044,8 @@
             filePath = "UITest/SceneDelegate.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "277"
-            endingLineNumber = "277"
+            startingLineNumber = "276"
+            endingLineNumber = "276"
             landmarkName = "-DonateIntet"
             landmarkType = "7">
          </BreakpointContent>
@@ -2060,25 +2060,9 @@
             filePath = "UITest/SceneDelegate.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "-playMediaIntentTest"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "697333C4-3985-4C59-9CDE-D38C6B50AE70"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UITest/SceneDelegate.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
-            landmarkName = "-searchMediaIntentTest"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

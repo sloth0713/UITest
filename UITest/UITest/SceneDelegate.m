@@ -81,7 +81,7 @@
     
     //donate
 //    [self customIntentTest];
-//    [self playMediaIntentTest];
+    [self playMediaIntentTest];
     [self upcomeMediaIntentTest];
 //    [self searchMediaIntentTest];
 //    [self sendMessageIntentTest];
@@ -154,6 +154,36 @@
     [INUpcomingMediaManager.sharedManager setSuggestedMediaIntents:set];
 }
 
+- (void)playMediaIntentTest
+{
+    UIImage *image = [UIImage imageNamed:@"red"];
+    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
+
+    if (!imageData) return;
+    
+    INImage *artWork = [INImage imageWithImageData:imageData];
+    INMediaItem *item = [[INMediaItem alloc] initWithIdentifier:@"red1"
+                                                          title:@"red1"
+                                                          type:INMediaItemTypeArtist
+                                                          artwork:artWork];
+    INPlayMediaIntent *playIntent = [[INPlayMediaIntent alloc] initWithMediaItems:nil
+                                                                   mediaContainer:item
+                                                                     playShuffled:nil
+                                                               playbackRepeatMode:INPlaybackRepeatModeNone
+                                                                   resumePlayback:nil
+                                                            playbackQueueLocation:INPlaybackQueueLocationUnknown
+                                                                    playbackSpeed:nil
+                                                                      mediaSearch:nil];
+
+    INInteraction *interaction = [[INInteraction alloc] initWithIntent:playIntent response:nil];
+    [interaction donateInteractionWithCompletion:^(NSError *error){
+        if (error) {
+            NSLog(@"donate error:%@", error.description);
+        }else {
+            NSLog(@"donate success");
+        }
+    }];
+}
 
 - (void)searchMediaIntentTest
 {
@@ -174,37 +204,6 @@
     INSearchForMediaIntent *searchIntent = [[INSearchForMediaIntent alloc] initWithMediaItems:@[item] mediaSearch:mediaSearch];
     
     INInteraction *interaction = [[INInteraction alloc] initWithIntent:searchIntent response:nil];
-    [interaction donateInteractionWithCompletion:^(NSError *error){
-        if (error) {
-            NSLog(@"donate error:%@", error.description);
-        }else {
-            NSLog(@"donate success");
-        }
-    }];
-}
-
-- (void)playMediaIntentTest
-{
-    UIImage *image = [UIImage imageNamed:@"red"];
-    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
-
-    if (!imageData) return;
-    
-    INImage *artWork = [INImage imageWithImageData:imageData];
-    INMediaItem *item = [[INMediaItem alloc] initWithIdentifier:@"taylor swift"
-                                                          title:@"taylor swift"
-                                                          type:INMediaItemTypeArtist
-                                                          artwork:artWork];
-    INPlayMediaIntent *playIntent = [[INPlayMediaIntent alloc] initWithMediaItems:nil
-                                                                   mediaContainer:item
-                                                                     playShuffled:nil
-                                                               playbackRepeatMode:INPlaybackRepeatModeNone
-                                                                   resumePlayback:nil
-                                                            playbackQueueLocation:INPlaybackQueueLocationUnknown
-                                                                    playbackSpeed:nil
-                                                                      mediaSearch:nil];
-
-    INInteraction *interaction = [[INInteraction alloc] initWithIntent:playIntent response:nil];
     [interaction donateInteractionWithCompletion:^(NSError *error){
         if (error) {
             NSLog(@"donate error:%@", error.description);
