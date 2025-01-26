@@ -81,7 +81,7 @@
     
     //donate
 //    [self customIntentTest];
-    [self playMediaIntentTest];
+//    [self playMediaIntentTest];
     [self upcomeMediaIntentTest];
 //    [self searchMediaIntentTest];
 //    [self sendMessageIntentTest];
@@ -136,11 +136,12 @@
     
     //这个不仅是短视频，直播也能用
     INImage *artWork = [INImage imageWithImageData:imageData];
-    INMediaItem *item = [[INMediaItem alloc] initWithIdentifier:@"taylor swift"
-                                                          title:@"taylor swift"
-                                                          type:INMediaItemTypeArtist
-                                                          artwork:artWork];
-    INPlayMediaIntent *playIntent = [[INPlayMediaIntent alloc] initWithMediaItems:nil
+    INMediaItem *item = [[INMediaItem alloc] initWithIdentifier:@"taylor swift1"
+                                                          title:@"你关注的taylor swift的最新视频"
+                                                          type:INMediaItemTypeNews
+                                                          artwork:artWork
+                                                         artist:@"taylor swift"];
+    INPlayMediaIntent *playIntent1 = [[INPlayMediaIntent alloc] initWithMediaItems:@[item]
                                                                    mediaContainer:item
                                                                      playShuffled:nil
                                                                playbackRepeatMode:INPlaybackRepeatModeNone
@@ -148,7 +149,47 @@
                                                             playbackQueueLocation:INPlaybackQueueLocationUnknown
                                                                     playbackSpeed:nil
                                                                       mediaSearch:nil];
-    NSOrderedSet *set = [NSOrderedSet orderedSetWithObjects:playIntent,nil];
+    
+    INMediaItem *item2 = [[INMediaItem alloc] initWithIdentifier:@"taylor swift1"
+                                                          title:@"tiktok热榜"
+                                                          type:INMediaItemTypeNews
+                                                          artwork:nil];
+    INPlayMediaIntent *playIntent2 = [[INPlayMediaIntent alloc] initWithMediaItems:nil
+                                                                   mediaContainer:item2
+                                                                     playShuffled:nil
+                                                               playbackRepeatMode:INPlaybackRepeatModeNone
+                                                                   resumePlayback:nil
+                                                            playbackQueueLocation:INPlaybackQueueLocationUnknown
+                                                                    playbackSpeed:nil
+                                                                      mediaSearch:nil];
+    
+    INMediaItem *item3 = [[INMediaItem alloc] initWithIdentifier:@"taylor swift1"
+                                                          title:@"你喜欢的搞笑视频"
+                                                          type:INMediaItemTypeNews
+                                                          artwork:nil];
+    INPlayMediaIntent *playIntent3 = [[INPlayMediaIntent alloc] initWithMediaItems:nil
+                                                                   mediaContainer:item3
+                                                                     playShuffled:nil
+                                                               playbackRepeatMode:INPlaybackRepeatModeNone
+                                                                   resumePlayback:nil
+                                                            playbackQueueLocation:INPlaybackQueueLocationUnknown
+                                                                    playbackSpeed:nil
+                                                                      mediaSearch:nil];
+    
+    INMediaItem *item4 = [[INMediaItem alloc] initWithIdentifier:@"taylor swift"
+                                                          title:@"你关注好友的直播"
+                                                          type:INMediaItemTypeNews
+                                                          artwork:nil];
+    INPlayMediaIntent *playIntent4 = [[INPlayMediaIntent alloc] initWithMediaItems:nil
+                                                                   mediaContainer:item4
+                                                                     playShuffled:nil
+                                                               playbackRepeatMode:INPlaybackRepeatModeNone
+                                                                   resumePlayback:nil
+                                                            playbackQueueLocation:INPlaybackQueueLocationUnknown
+                                                                    playbackSpeed:nil
+                                                                      mediaSearch:nil];
+    
+    NSOrderedSet *set = [NSOrderedSet orderedSetWithObjects:playIntent1,playIntent2,playIntent3,playIntent4,nil];
     
     //这里如何删除？目前好像只能通过set的内容为空来删除？
     [INUpcomingMediaManager.sharedManager setSuggestedMediaIntents:set];
