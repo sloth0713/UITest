@@ -81,9 +81,10 @@
     
     //donate
 //    [self customIntentTest];
-    [self playMediaIntentTest];
-//    [self upcomeMediaIntentTest];
-    [self sendMessageIntentTest];
+//    [self playMediaIntentTest];
+    [self upcomeMediaIntentTest];
+//    [self searchMediaIntentTest];
+//    [self sendMessageIntentTest];
 }
 
 - (void)sendMessageIntentTest
@@ -110,8 +111,11 @@
     INPersonHandle *recipientHandle = [[INPersonHandle alloc] initWithValue:@"amy.@gemail.com" type:INPersonHandleTypeEmailAddress];
     INPerson *recipient = [[INPerson alloc] initWithPersonHandle:recipientHandle nameComponents:nil displayName:@"amy" image:icon contactIdentifier:nil customIdentifier:@"recipient amy"];
     
+    
+    INSpeakableString *name = [[INSpeakableString alloc] initWithSpokenPhrase:@"yyy"];
+    
     //如何修改icon
-    INSendMessageIntent *intent = [[INSendMessageIntent alloc] initWithRecipients:@[recipient] outgoingMessageType:INOutgoingMessageTypeOutgoingMessageText content:@"nice to see you" speakableGroupName:nil conversationIdentifier:nil serviceName:@"send message" sender:senderPerson attachments:nil];
+    INSendMessageIntent *intent = [[INSendMessageIntent alloc] initWithRecipients:@[recipient] outgoingMessageType:INOutgoingMessageTypeOutgoingMessageText content:@"nice to see you" speakableGroupName:name conversationIdentifier:nil serviceName:@"send message" sender:senderPerson attachments:nil];
 
     INInteraction *interaction = [[INInteraction alloc] initWithIntent:intent response:nil];
     [interaction donateInteractionWithCompletion:^(NSError *error){
@@ -128,19 +132,14 @@
     UIImage *image = [UIImage imageNamed:@"red"];
     NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
 
-    if (imageData) {
-        NSLog(@"在这里可以继续使用 imageData，例如将其保存到文件中或进行其他操作");
-    } else {
-        // 获取图片数据失败
-        NSLog(@"获取图片数据失败");
-        return;
-    }
+    if (!imageData) return;
     
+    //这个不仅是短视频，直播也能用
     INImage *artWork = [INImage imageWithImageData:imageData];
-    INMediaItem *item = [[INMediaItem alloc] initWithIdentifier:@"music"
-                                                          title:@"red"
-                                                           type:INMediaItemTypeMusic
-                                                        artwork:artWork];
+    INMediaItem *item = [[INMediaItem alloc] initWithIdentifier:@"taylor swift"
+                                                          title:@"taylor swift"
+                                                          type:INMediaItemTypeArtist
+                                                          artwork:artWork];
     INPlayMediaIntent *playIntent = [[INPlayMediaIntent alloc] initWithMediaItems:nil
                                                                    mediaContainer:item
                                                                      playShuffled:nil
@@ -155,24 +154,46 @@
     [INUpcomingMediaManager.sharedManager setSuggestedMediaIntents:set];
 }
 
-- (void)playMediaIntentTest
+
+- (void)searchMediaIntentTest
 {
+
+    //好像没啥用
     UIImage *image = [UIImage imageNamed:@"red"];
     NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
 
-    if (imageData) {
-        NSLog(@"在这里可以继续使用 imageData，例如将其保存到文件中或进行其他操作");
-        INImage *artWork = [INImage imageWithImageData:imageData];
-    } else {
-        // 获取图片数据失败
-        NSLog(@"获取图片数据失败");
-        return;
-    }
+    if (!imageData) return;
     
     INImage *artWork = [INImage imageWithImageData:imageData];
     INMediaItem *item = [[INMediaItem alloc] initWithIdentifier:@"music"
                                                           title:@"red"
                                                           type:INMediaItemTypeMusic
+                                                          artwork:artWork];
+    INMediaSearch *mediaSearch = [[INMediaSearch alloc] initWithMediaType:INMediaItemTypeNews sortOrder:INMediaSortOrderNewest mediaName:@"red" artistName:@"taylor swift" albumName:@"red" genreNames:@[@"red"] moodNames:@[@"red"] releaseDate:nil reference:INMediaReferenceCurrentlyPlaying mediaIdentifier:@"red"];
+    
+    INSearchForMediaIntent *searchIntent = [[INSearchForMediaIntent alloc] initWithMediaItems:@[item] mediaSearch:mediaSearch];
+    
+    INInteraction *interaction = [[INInteraction alloc] initWithIntent:searchIntent response:nil];
+    [interaction donateInteractionWithCompletion:^(NSError *error){
+        if (error) {
+            NSLog(@"donate error:%@", error.description);
+        }else {
+            NSLog(@"donate success");
+        }
+    }];
+}
+
+- (void)playMediaIntentTest
+{
+    UIImage *image = [UIImage imageNamed:@"red"];
+    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
+
+    if (!imageData) return;
+    
+    INImage *artWork = [INImage imageWithImageData:imageData];
+    INMediaItem *item = [[INMediaItem alloc] initWithIdentifier:@"taylor swift"
+                                                          title:@"taylor swift"
+                                                          type:INMediaItemTypeArtist
                                                           artwork:artWork];
     INPlayMediaIntent *playIntent = [[INPlayMediaIntent alloc] initWithMediaItems:nil
                                                                    mediaContainer:item
