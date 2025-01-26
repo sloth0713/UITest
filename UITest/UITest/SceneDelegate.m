@@ -24,6 +24,29 @@
 
 @implementation SceneDelegate
 
+- (void)scene:(UIScene *)scene continueUserActivity:(NSUserActivity *)userActivity
+{
+    INIntent *intent = userActivity.interaction.intent;
+    if (intent) {
+        if ([intent isKindOfClass:[DonateIntent class]]) {
+            DonateIntent *donateIntent = (DonateIntent *)intent;
+            NSLog(@"title %@",donateIntent.title);
+            NSLog(@"donateIntent");
+        }else if ([intent isKindOfClass:[INPlayMediaIntent class]]){
+            INPlayMediaIntent *playMediaIntent = (INPlayMediaIntent *)intent;
+            NSLog(@"media:%@",playMediaIntent.mediaContainer.title);
+            NSLog(@"playMediaIntent");
+        }else if ([intent isKindOfClass:[INSendMessageIntent class]]){
+            INSendMessageIntent *sendMessageIntent = (INSendMessageIntent *)intent;
+            NSLog(@"sender:%@",sendMessageIntent.sender.displayName);
+            NSLog(@"sendMessageIntent");
+        }else{
+            NSLog(@"can't handle intent");
+        }
+    }else {
+        NSLog(@"Don't have intent");
+    }
+}
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -45,20 +68,149 @@
 //    [self orderfileTest];
 //    [self pageInCollection];
 //    [self startMonitor];
-//    int loop = 10;
-//    for (int i = 0; i<loop; i++) {
-//        [self DonateIntet];
-//        [self deleteSiriDonate];
-        
-//        NSLog(@"DonateIntet");
-//    }
+    [self donateTset];
     
     
     NSLog(@"willConnectToSession");
 }
 
+- (void)donateTset
+{
+    //delete
+//    [self deleteSiriDonate];
+    
+    //donate
+//    [self customIntentTest];
+    [self playMediaIntentTest];
+//    [self upcomeMediaIntentTest];
+    [self sendMessageIntentTest];
+}
+
+- (void)sendMessageIntentTest
+{
+    // josh 给amy 发送了"nice to see you"
+
+    UIImage *image = [UIImage imageNamed:@"josh"];
+    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
+
+    if (imageData) {
+        NSLog(@"在这里可以继续使用 imageData，例如将其保存到文件中或进行其他操作");
+    } else {
+        // 获取图片数据失败
+        NSLog(@"获取图片数据失败");
+        return;
+    }
+    
+    INImage *icon = [INImage imageWithImageData:imageData];
+    INPersonHandle *senderHandle = [[INPersonHandle alloc] initWithValue:@"josh.@gemail.com" type:INPersonHandleTypeEmailAddress];
+    
+    INPerson *senderPerson = [[INPerson alloc] initWithPersonHandle:senderHandle nameComponents:nil displayName:@"josh" image:icon contactIdentifier:nil customIdentifier:@"sender josh"];
+    
+    
+    INPersonHandle *recipientHandle = [[INPersonHandle alloc] initWithValue:@"amy.@gemail.com" type:INPersonHandleTypeEmailAddress];
+    INPerson *recipient = [[INPerson alloc] initWithPersonHandle:recipientHandle nameComponents:nil displayName:@"amy" image:icon contactIdentifier:nil customIdentifier:@"recipient amy"];
+    
+    //如何修改icon
+    INSendMessageIntent *intent = [[INSendMessageIntent alloc] initWithRecipients:@[recipient] outgoingMessageType:INOutgoingMessageTypeOutgoingMessageText content:@"nice to see you" speakableGroupName:nil conversationIdentifier:nil serviceName:@"send message" sender:senderPerson attachments:nil];
+
+    INInteraction *interaction = [[INInteraction alloc] initWithIntent:intent response:nil];
+    [interaction donateInteractionWithCompletion:^(NSError *error){
+        if (error) {
+            NSLog(@"donate error:%@", error.description);
+        }else {
+            NSLog(@"donate success");
+        }
+    }];
+}
+
+- (void)upcomeMediaIntentTest
+{
+    UIImage *image = [UIImage imageNamed:@"red"];
+    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
+
+    if (imageData) {
+        NSLog(@"在这里可以继续使用 imageData，例如将其保存到文件中或进行其他操作");
+    } else {
+        // 获取图片数据失败
+        NSLog(@"获取图片数据失败");
+        return;
+    }
+    
+    INImage *artWork = [INImage imageWithImageData:imageData];
+    INMediaItem *item = [[INMediaItem alloc] initWithIdentifier:@"music"
+                                                          title:@"red"
+                                                           type:INMediaItemTypeMusic
+                                                        artwork:artWork];
+    INPlayMediaIntent *playIntent = [[INPlayMediaIntent alloc] initWithMediaItems:nil
+                                                                   mediaContainer:item
+                                                                     playShuffled:nil
+                                                               playbackRepeatMode:INPlaybackRepeatModeNone
+                                                                   resumePlayback:nil
+                                                            playbackQueueLocation:INPlaybackQueueLocationUnknown
+                                                                    playbackSpeed:nil
+                                                                      mediaSearch:nil];
+    NSOrderedSet *set = [NSOrderedSet orderedSetWithObjects:playIntent,nil];
+    
+    //这里如何删除？目前好像只能通过set的内容为空来删除？
+    [INUpcomingMediaManager.sharedManager setSuggestedMediaIntents:set];
+}
+
+- (void)playMediaIntentTest
+{
+    UIImage *image = [UIImage imageNamed:@"red"];
+    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
+
+    if (imageData) {
+        NSLog(@"在这里可以继续使用 imageData，例如将其保存到文件中或进行其他操作");
+        INImage *artWork = [INImage imageWithImageData:imageData];
+    } else {
+        // 获取图片数据失败
+        NSLog(@"获取图片数据失败");
+        return;
+    }
+    
+    INImage *artWork = [INImage imageWithImageData:imageData];
+    INMediaItem *item = [[INMediaItem alloc] initWithIdentifier:@"music"
+                                                          title:@"red"
+                                                          type:INMediaItemTypeMusic
+                                                          artwork:artWork];
+    INPlayMediaIntent *playIntent = [[INPlayMediaIntent alloc] initWithMediaItems:nil
+                                                                   mediaContainer:item
+                                                                     playShuffled:nil
+                                                               playbackRepeatMode:INPlaybackRepeatModeNone
+                                                                   resumePlayback:nil
+                                                            playbackQueueLocation:INPlaybackQueueLocationUnknown
+                                                                    playbackSpeed:nil
+                                                                      mediaSearch:nil];
+
+    INInteraction *interaction = [[INInteraction alloc] initWithIntent:playIntent response:nil];
+    [interaction donateInteractionWithCompletion:^(NSError *error){
+        if (error) {
+            NSLog(@"donate error:%@", error.description);
+        }else {
+            NSLog(@"donate success");
+        }
+    }];
+}
+
+
+- (void)customIntentTest
+{
+    int loop = 10;
+    for (int i = 0; i<loop; i++) {
+        [self DonateIntet];
+        
+        NSLog(@"DonateIntet");
+    }
+}
+
 - (void)deleteSiriDonate
 {
+    
+//    INUpcomingMediaManager.sharedManager
+    
+    [INUpcomingMediaManager.sharedManager setSuggestedMediaIntents:nil];
+    
     [NSUserActivity deleteAllSavedUserActivitiesWithCompletionHandler:^(){
         NSLog(@"All siri suggestion cache has been cleaned");
     }];
@@ -90,9 +242,9 @@
         intentUserActivity.userInfo = @{@"a":@(1)};
         NSDate *expirationDate = [[NSDate date] initWithTimeIntervalSinceNow: 24*60*60 * 7];
         intentUserActivity.expirationDate = expirationDate;
-        [intentUserActivity becomeCurrent];
+//        [intentUserActivity becomeCurrent];
         
-        
+//        
         INIntentResponse *response = [[INIntentResponse alloc] init];
         response.userActivity = intentUserActivity;
         INInteraction *action = [[INInteraction alloc] initWithIntent:intent response:response];

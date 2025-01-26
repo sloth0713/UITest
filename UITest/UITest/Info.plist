@@ -5,6 +5,8 @@
 	<key>NSUserActivityTypes</key>
 	<array>
 		<string>DonateIntent</string>
+		<string>INPlayMediaIntent</string>
+		<string>INSendMessageIntent</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

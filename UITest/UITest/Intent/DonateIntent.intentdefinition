@@ -11,7 +11,7 @@
 	<key>INIntentDefinitionSystemVersion</key>
 	<string>23F79</string>
 	<key>INIntentDefinitionToolsBuildVersion</key>
-	<string>16B5029d</string>
+	<string>16B40</string>
 	<key>INIntentDefinitionToolsVersion</key>
 	<string>16.1</string>
 	<key>INIntents</key>
@@ -20,7 +20,7 @@
 			<key>INIntentCategory</key>
 			<string>generic</string>
 			<key>INIntentDefaultImageName</key>
-			<string>suggestion</string>
+			<string>red</string>
 			<key>INIntentDescription</key>
 			<string>Donate Intent description</string>
 			<key>INIntentDescriptionID</key>

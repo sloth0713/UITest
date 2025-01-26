@@ -73,6 +73,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2BA8C4022D426BB100C3E0A9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2B0F97D42D19371500E6477B /* order.order */ = {isa = PBXFileReference; lastKnownFileType = text; path = order.order; sourceTree = "<group>"; };
 		2B12993C2CFEB7460003F3CF /* ThreadTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadTest.h; sourceTree = "<group>"; };
@@ -137,6 +150,8 @@
 		2B57A54E2D0057A4006883B6 /* CustomPagingControllerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomPagingControllerProtocol.h; sourceTree = "<group>"; };
 		2B9B5E212D23AF70005A3B20 /* UIView+hook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+hook.h"; sourceTree = "<group>"; };
 		2B9B5E222D23AF70005A3B20 /* UIView+hook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+hook.m"; sourceTree = "<group>"; };
+		2BA8C3DE2D426BB000C3E0A9 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		2BA8C3EA2D426BB000C3E0A9 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		2BB115882CF59B5C008F6D40 /* InboxVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InboxVC.h; sourceTree = "<group>"; };
 		2BB115892CF59B5C008F6D40 /* InboxVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InboxVC.m; sourceTree = "<group>"; };
 		2BB1158C2CF5BD03008F6D40 /* RunLoopFluencyMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopFluencyMonitor.h; sourceTree = "<group>"; };
@@ -208,6 +223,7 @@
 				2B2E9EBE2CCB6AC100DFC9ED /* UITest */,
 				2B2E9EDA2CCB6AC200DFC9ED /* UITestTests */,
 				2B2E9EE42CCB6AC200DFC9ED /* UITestUITests */,
+				2BA8C3DD2D426BB000C3E0A9 /* Frameworks */,
 				2B2E9EBD2CCB6AC100DFC9ED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -355,6 +371,15 @@
 			path = Paging;
 			sourceTree = "<group>";
 		};
+		2BA8C3DD2D426BB000C3E0A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BA8C3DE2D426BB000C3E0A9 /* Intents.framework */,
+				2BA8C3EA2D426BB000C3E0A9 /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2BB115872CF59B18008F6D40 /* Inbox */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,6 +460,7 @@
 				2B2E9EB82CCB6AC100DFC9ED /* Sources */,
 				2B2E9EB92CCB6AC100DFC9ED /* Frameworks */,
 				2B2E9EBA2CCB6AC100DFC9ED /* Resources */,
+				2BA8C4022D426BB100C3E0A9 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);

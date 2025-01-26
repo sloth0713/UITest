@@ -12,6 +12,10 @@
 
 +(void)hookDelegate
 {
+    BOOL isHook = NO;
+    if (!isHook) {
+        return;
+    }
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
