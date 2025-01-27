@@ -165,16 +165,18 @@
     
     INMediaItem *item3 = [[INMediaItem alloc] initWithIdentifier:@"taylor swift1"
                                                           title:@"你喜欢的搞笑视频"
-                                                          type:INMediaItemTypeNews
-                                                          artwork:nil];
-    INPlayMediaIntent *playIntent3 = [[INPlayMediaIntent alloc] initWithMediaItems:nil
+                                                            type:INMediaItemTypeMusic
+                                                          artwork:artWork
+                                                          artist:@"adele"];
+    INMediaSearch *mediaSearch = [[INMediaSearch alloc] initWithMediaType:INMediaItemTypeMusic sortOrder:INMediaSortOrderBest mediaName:@"gaoxiao" artistName:@"deell" albumName:@"albumName" genreNames:@[@"genreNames"] moodNames:@[@"moodNames"] releaseDate:nil reference:INMediaReferenceMy mediaIdentifier:@"mediaIdentifier"];
+    INPlayMediaIntent *playIntent3 = [[INPlayMediaIntent alloc] initWithMediaItems:@[item3]
                                                                    mediaContainer:item3
                                                                      playShuffled:nil
                                                                playbackRepeatMode:INPlaybackRepeatModeNone
                                                                    resumePlayback:nil
                                                             playbackQueueLocation:INPlaybackQueueLocationUnknown
                                                                     playbackSpeed:nil
-                                                                      mediaSearch:nil];
+                                                                      mediaSearch:mediaSearch];
     
     INMediaItem *item4 = [[INMediaItem alloc] initWithIdentifier:@"taylor swift"
                                                           title:@"你关注好友的直播"
