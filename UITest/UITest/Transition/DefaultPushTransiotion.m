@@ -13,9 +13,9 @@
 
 - (void)animateTransition:(nonnull id<UIViewControllerContextTransitioning>)transitionContext
 {
-    [self animateTransitionLeftPush:transitionContext];
+//    [self animateTransitionLeftPush:transitionContext];
 //    [self animateTransitionRightPush:transitionContext];
-//    [self animateTransitionPropertyAnimator:transitionContext];
+    [self animateTransitionPropertyAnimator:transitionContext];
 }
 
 - (void)animateTransitionPropertyAnimator:(nonnull id<UIViewControllerContextTransitioning>)transitionContext

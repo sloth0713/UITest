@@ -10,24 +10,7 @@ import UIKit
 
 @objc
 public class SwiftPushTransition: NSObject {
-    
-    var animator:UIViewPropertyAnimator?
 
-//    init(animator: UIViewPropertyAnimator) {
-//        self.animator = animator
-//    }
-//    
-//    @objc
-//    override convenience init() {
-//        
-//        let stiffness: CGFloat = 100
-//        let dampingRatio: CGFloat = 0.5
-//
-//        let animator = UIViewPropertyAnimator(duration: 1.0, timingParameters: UISpringTimingParameters(dampingRatio: dampingRatio, initialVelocity: CGVector(dx: 0, dy: 0)))
-//        self.init(animator)
-//    }
-
-    
     @MainActor @objc
     public func animateTransitionPropertyAnimator(transitionContext:UIViewControllerContextTransitioning) {
         
@@ -51,17 +34,17 @@ public class SwiftPushTransition: NSObject {
         let stiffness: CGFloat = 100
         let dampingRatio: CGFloat = 0.5
 
-        animator = UIViewPropertyAnimator(duration: 1.0, timingParameters: UISpringTimingParameters(dampingRatio: dampingRatio, initialVelocity: CGVector(dx: 0, dy: 0)))
+        let animator = UIViewPropertyAnimator(duration: 1.0, timingParameters: UISpringTimingParameters(dampingRatio: dampingRatio, initialVelocity: CGVector(dx: 0, dy: 0)))
         // 添加动画效果
-        animator?.addAnimations {
+        animator.addAnimations {
             fromVC.view.frame = CGRectOffset(fromVC.view.frame, -screenBounds.size.width, 0);// 将当前视图向左移动一半的距离，这样fromvc和toVC一起配合移动。注释掉这行，fromvc不动，相当于tovc覆盖过去
             toVC.view.frame = finalFrame // 将目标视图移动到最终frame
         }
 
-        animator?.addCompletion { position in
+        animator.addCompletion { position in
             transitionContext.completeTransition(true)
         }
-        animator?.startAnimation()
+        animator.startAnimation()
     }
     
     @objc

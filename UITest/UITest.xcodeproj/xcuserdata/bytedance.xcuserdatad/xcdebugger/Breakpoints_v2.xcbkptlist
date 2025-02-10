@@ -1975,22 +1975,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CC112CE5-9548-451C-B5C9-A046DC7C00C0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UITest/Transition/SwiftPushTransition.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "animateTransitionPropertyAnimator(transitionContext:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "3CFAFC6B-5382-4ADB-AA55-40EFD8009C2B"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1998,8 +1982,8 @@
             filePath = "UITest/Transition/SwiftPushTransition.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "animateTransitionPropertyAnimator(transitionContext:)"
             landmarkType = "7">
          </BreakpointContent>
