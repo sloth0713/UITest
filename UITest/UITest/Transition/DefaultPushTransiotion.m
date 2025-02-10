@@ -6,6 +6,8 @@
 //
 
 #import "DefaultPushTransiotion.h"
+#import <UIKit/UIKit.h>
+#import "../../../UITest/UITest/UITest-Bridging-Header.h"
 
 @implementation DefaultPushTransiotion
 
@@ -13,7 +15,15 @@
 {
     [self animateTransitionLeftPush:transitionContext];
 //    [self animateTransitionRightPush:transitionContext];
+//    [self animateTransitionPropertyAnimator:transitionContext];
 }
+
+- (void)animateTransitionPropertyAnimator:(nonnull id<UIViewControllerContextTransitioning>)transitionContext
+{
+    SwiftPushTransition *transition = [[SwiftPushTransition alloc] init];
+    [transition animateTransitionPropertyAnimatorWithTransitionContext:transitionContext];
+}
+
 
 - (void)animateTransitionLeftPush:(nonnull id<UIViewControllerContextTransitioning>)transitionContext
 {

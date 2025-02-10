@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0F50732D57560D00B49D75 /* SwiftPushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0F50722D57560D00B49D75 /* SwiftPushTransition.swift */; };
 		2B0F97D52D19371500E6477B /* order.order in Resources */ = {isa = PBXBuildFile; fileRef = 2B0F97D42D19371500E6477B /* order.order */; };
 		2B12993E2CFEB7460003F3CF /* ThreadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B12993D2CFEB7460003F3CF /* ThreadTest.m */; };
 		2B2E9EC12CCB6AC100DFC9ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2E9EC02CCB6AC100DFC9ED /* AppDelegate.m */; };
@@ -87,6 +88,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2B0F50722D57560D00B49D75 /* SwiftPushTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPushTransition.swift; sourceTree = "<group>"; };
+		2B0F50762D57564C00B49D75 /* UITest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITest-Bridging-Header.h"; sourceTree = "<group>"; };
 		2B0F97D42D19371500E6477B /* order.order */ = {isa = PBXFileReference; lastKnownFileType = text; path = order.order; sourceTree = "<group>"; };
 		2B12993C2CFEB7460003F3CF /* ThreadTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadTest.h; sourceTree = "<group>"; };
 		2B12993D2CFEB7460003F3CF /* ThreadTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadTest.m; sourceTree = "<group>"; };
@@ -262,6 +265,7 @@
 				2B2E9ED12CCB6AC200DFC9ED /* main.m */,
 				2BB797FB2CDA23280056DBB9 /* Responder.h */,
 				2BB797FC2CDA23280056DBB9 /* Responder.m */,
+				2B0F50762D57564C00B49D75 /* UITest-Bridging-Header.h */,
 			);
 			path = UITest;
 			sourceTree = "<group>";
@@ -334,6 +338,7 @@
 				2B456A252D0AFC0D00E1816C /* UIViewController+Transition.m */,
 				2B9B5E212D23AF70005A3B20 /* UIView+hook.h */,
 				2B9B5E222D23AF70005A3B20 /* UIView+hook.m */,
+				2B0F50722D57560D00B49D75 /* SwiftPushTransition.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -518,6 +523,7 @@
 				TargetAttributes = {
 					2B2E9EBB2CCB6AC100DFC9ED = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1610;
 					};
 					2B2E9ED62CCB6AC200DFC9ED = {
 						CreatedOnToolsVersion = 15.2;
@@ -583,6 +589,7 @@
 			files = (
 				2B2E9F1F2CCF63B100DFC9ED /* DefaultPopTransiotion.m in Sources */,
 				2BB1158A2CF59B5C008F6D40 /* InboxVC.m in Sources */,
+				2B0F50732D57560D00B49D75 /* SwiftPushTransition.swift in Sources */,
 				2BB797FD2CDA23280056DBB9 /* Responder.m in Sources */,
 				2B5017C72D1980520076C4BB /* DonateIntent.intentdefinition in Sources */,
 				2B2E9F062CCB6FE100DFC9ED /* TabBar.m in Sources */,
@@ -792,6 +799,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5Z4W2PM247;
@@ -811,6 +819,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "yjx-xcdebug.UITest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -820,6 +831,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5Z4W2PM247;
@@ -839,6 +851,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "yjx-xcdebug.UITest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
