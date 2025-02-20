@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -93,6 +93,8 @@
 		2B0F97D42D19371500E6477B /* order.order */ = {isa = PBXFileReference; lastKnownFileType = text; path = order.order; sourceTree = "<group>"; };
 		2B12993C2CFEB7460003F3CF /* ThreadTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadTest.h; sourceTree = "<group>"; };
 		2B12993D2CFEB7460003F3CF /* ThreadTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadTest.m; sourceTree = "<group>"; };
+		2B259F892D6334D2009EF31C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		2B259F8B2D6334D2009EF31C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		2B2E9EBC2CCB6AC100DFC9ED /* UITest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B2E9EBF2CCB6AC100DFC9ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2B2E9EC02CCB6AC100DFC9ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -185,6 +187,10 @@
 		2BF063832CD3896B00A2B3F1 /* FriendsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		2B259F8D2D6334D2009EF31C /* UITestWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = UITestWidget; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		2B2E9EB92CCB6AC100DFC9ED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -226,6 +232,7 @@
 				2B2E9EBE2CCB6AC100DFC9ED /* UITest */,
 				2B2E9EDA2CCB6AC200DFC9ED /* UITestTests */,
 				2B2E9EE42CCB6AC200DFC9ED /* UITestUITests */,
+				2B259F8D2D6334D2009EF31C /* UITestWidget */,
 				2BA8C3DD2D426BB000C3E0A9 /* Frameworks */,
 				2B2E9EBD2CCB6AC100DFC9ED /* Products */,
 			);
@@ -381,6 +388,8 @@
 			children = (
 				2BA8C3DE2D426BB000C3E0A9 /* Intents.framework */,
 				2BA8C3EA2D426BB000C3E0A9 /* IntentsUI.framework */,
+				2B259F892D6334D2009EF31C /* WidgetKit.framework */,
+				2B259F8B2D6334D2009EF31C /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -519,6 +528,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					2B2E9EBB2CCB6AC100DFC9ED = {

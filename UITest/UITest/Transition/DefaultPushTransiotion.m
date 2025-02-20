@@ -16,6 +16,44 @@
 //    [self animateTransitionLeftPush:transitionContext];
 //    [self animateTransitionRightPush:transitionContext];
     [self animateTransitionPropertyAnimator:transitionContext];
+//    [self animateTransitionOCPropertyAnimator:transitionContext];
+}
+
+- (void)animateTransitionOCPropertyAnimator:(nonnull id<UIViewControllerContextTransitioning>)transitionContext
+{
+    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIView *containerView = [transitionContext containerView];
+    CGRect finalFrame = [transitionContext finalFrameForViewController:toVC];
+
+    [containerView addSubview:toVC.view];
+    
+
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    CGRect initialFrame = CGRectOffset(finalFrame, screenBounds.size.width, 0);
+    toVC.view.frame = initialFrame;
+
+    
+    UISpringTimingParameters *timing = [[UISpringTimingParameters alloc] initWithMass:1 stiffness:9 damping:61.56 initialVelocity:CGVectorMake(0, 0)];
+    UIViewPropertyAnimator *animator = [[UIViewPropertyAnimator alloc] initWithDuration:0 timingParameters:timing];
+    
+    
+    [animator addAnimations:^{
+        fromVC.view.frame = CGRectOffset(fromVC.view.frame, -screenBounds.size.width, 0);
+        toVC.view.frame = finalFrame;
+    }];
+    [animator addCompletion:^(UIViewAnimatingPosition finalPosition) {
+        [transitionContext completeTransition:YES]; // 转场动画完成，调用 completeTransition
+        NSLog(@"completeTransition");
+    }];
+    
+    CGFloat duration =5;
+    [CATransaction begin];
+    [CATransaction setAnimationDuration:duration];
+    [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithControlPoints:0.293 :0.453 :0.584 :1]];
+    
+    [animator startAnimation];
+    [CATransaction commit];
 }
 
 - (void)animateTransitionPropertyAnimator:(nonnull id<UIViewControllerContextTransitioning>)transitionContext
@@ -50,14 +88,27 @@
     CGRect initialFrame = CGRectOffset(finalFrame, screenBounds.size.width, 0);
     toVC.view.frame = initialFrame;
 
+    /*如果转场时长比动画时长长：动画结束后，转场没结束，导致中间时间段，用户无法点击
+     如果转场时长比动画时长短：动画慢，没啥影响
+     */
+    CGFloat duration = [self transitionDuration:transitionContext];
+//    duration = 0.2;
     // 执行动画
-    [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+    //加个CATransition
+    
+    [CATransaction begin];
+    [CATransaction setAnimationDuration:duration];
+    [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithControlPoints:0.293 :0.453 :0.584 :1]];
+    
+    [UIView animateWithDuration:duration animations:^{
         fromVC.view.frame = CGRectOffset(fromVC.view.frame, -screenBounds.size.width, 0); // 将当前视图向左移动一半的距离，这样fromvc和toVC一起配合移动。注释掉这行，fromvc不动，相当于tovc覆盖过去
         toVC.view.frame = finalFrame; // 将目标视图移动到最终frame
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:YES]; // 转场动画完成，调用 completeTransition
         NSLog(@"completeTransition");
     }];
+    
+    [CATransaction commit];
     
 //    想要tovc向左滑动，动画开始前，将tovc右移，即CGRectOffset(finalFrame, screenBounds.size.width, 0);
     //再用动画，将其回到最终位置

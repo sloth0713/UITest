@@ -4,9 +4,9 @@
 <dict>
 	<key>NSUserActivityTypes</key>
 	<array>
-		<string>INSearchForMediaIntent</string>
 		<string>DonateIntent</string>
 		<string>INPlayMediaIntent</string>
+		<string>INSearchForMediaIntent</string>
 		<string>INSendMessageIntent</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
