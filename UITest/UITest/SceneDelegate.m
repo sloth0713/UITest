@@ -129,15 +129,19 @@
 
 - (void)upcomeMediaIntentTest
 {
-    UIImage *image = [UIImage imageNamed:@"red"];
-    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
+//    UIImage *image = [UIImage imageNamed:@"red"];
+    UIImage *image = [UIImage systemImageNamed:@"play.square"];
+    image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    image = [image imageWithTintColor:[UIColor whiteColor]];
+
+    NSData *imageData = UIImagePNGRepresentation(image);
 
     if (!imageData) return;
     
     //这个不仅是短视频，直播也能用
     INImage *artWork = [INImage imageWithImageData:imageData];
     INMediaItem *item = [[INMediaItem alloc] initWithIdentifier:@"taylor swift1"
-                                                          title:@"你关注的taylor swift的最新视频"
+                                                          title:@"你可能喜欢的视频"
                                                           type:INMediaItemTypeNews
                                                           artwork:artWork
                                                          artist:@"taylor swift"];
@@ -191,7 +195,7 @@
                                                                     playbackSpeed:nil
                                                                       mediaSearch:nil];
     
-    NSOrderedSet *set = [NSOrderedSet orderedSetWithObjects:playIntent1,playIntent2,playIntent3,playIntent4,nil];
+    NSOrderedSet *set = [NSOrderedSet orderedSetWithObjects:playIntent1,nil];
     
     //这里如何删除？目前好像只能通过set的内容为空来删除？
     [INUpcomingMediaManager.sharedManager setSuggestedMediaIntents:set];

@@ -39,7 +39,7 @@
     self = [super init];
     if (self){
         self.name = name;
-        self.enbaleCustomPaging = YES;
+        self.enbaleCustomPaging = NO;
     }
     return self;
 }
