@@ -75,6 +75,11 @@
                                                  selector:@selector(keyboardDidShow:)
                                                      name:UIKeyboardDidShowNotification
                                                    object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(keyboardWillChangeFrame:)
+                                                     name:UIKeyboardWillChangeFrameNotification
+                                                   object:nil];
     }
     return _textField;
 }
@@ -98,6 +103,11 @@
     CGRect keyboardFrame = [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     NSTimeInterval animationDuration = [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     NSLog(@"keyboardDidShow notification : %@",userInfo);
+}
+
+- (void)keyboardWillChangeFrame:(NSNotification *)notification
+{
+    NSLog(@"keyboardWillChangeFrame notification : %@",notification.userInfo);
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField

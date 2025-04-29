@@ -36,5 +36,11 @@
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 }
 
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray<id<UIUserActivityRestoring>> * _Nullable))restorationHandler
+{
+    NSLog(@"fads");
+    return YES;
+}
+
 
 @end
