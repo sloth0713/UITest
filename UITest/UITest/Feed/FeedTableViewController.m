@@ -12,6 +12,7 @@
 #import "Paging/CustomPagingController.h"
 #import "Paging/CustomPagingControllerAnimation.h"
 #import "Paging/CustomPagingControllerProtocol.h"
+#import "../../../UITest/UITest/UITest-Bridging-Header.h"
 
 #define cellCount 200
 
@@ -124,7 +125,11 @@
 
 - (void)buttonClicked:(UIButton *)sender {
     NSLog(@"Button clicked!");
-    [Responder.shareInstance.topVC.navigationController pushViewController:[[OtherProfileViewController alloc] init] animated:YES];
+    BOOL isAnimation = YES;
+    
+//    OtherProfileViewController *otvc = [[OtherProfileViewController alloc] init];
+    SwiftOtherProfile *otvc = [[SwiftOtherProfile alloc] init];//需要BOOL customNavigationTransition = NO;
+    [Responder.shareInstance.topVC.navigationController pushViewController:otvc animated:isAnimation];
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
 {

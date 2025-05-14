@@ -49,7 +49,7 @@ void getArgumentType(Method originalMethod)
 
 +(void)hookDelegate
 {
-    BOOL customNavigationTransition = YES;
+    BOOL customNavigationTransition = NO;
     if (!customNavigationTransition) return;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
