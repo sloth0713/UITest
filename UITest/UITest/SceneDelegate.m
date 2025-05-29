@@ -12,6 +12,7 @@
 #import "Fluency/DisplayLinkFluencyMonitor.h"
 #import "Thread/ThreadTest.h"
 #import "Method/MethodTest.h"
+#import "Method/TransformerFix.h"
 #import "Method/AppOrderFiles.h"
 #import <mach/mach.h>
 #import <sys/sysctl.h>
@@ -69,6 +70,8 @@
 //    [self pageInCollection];
 //    [self startMonitor];
     [self donateTset];
+    
+    [TransformerFix fix];
     
     
     NSLog(@"willConnectToSession");

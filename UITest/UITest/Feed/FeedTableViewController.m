@@ -20,8 +20,26 @@
 #define viewHeight self.view.frame.size.height
 //#define viewHeight 100
 
+@interface classA ()
+
+@property (nonatomic, strong) NSObject *propertyB;
+
+@end
+
+//@interface classC ()
+//
+//@property (nonatomic, strong) NSObject *propertyB;
+//
+//@end
+
+@implementation classA
+
+
+@end
+
 @interface FeedTableViewController ()
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) classA *A;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSDate *beginDraggingTime;
 @property (nonatomic, strong) NSDate *endDraggingTime;
@@ -41,9 +59,21 @@
     if (self){
         self.name = name;
         self.enbaleCustomPaging = NO;
+        self.A = [[classA alloc] init];
+        self.A.propertyB = [[NSObject alloc] init];
+        NSObject *propertyX = [self getB];
+        self.A.propertyB = [[NSObject alloc] init];
+        NSLog(@"is equal : %d",propertyX == self.A.propertyB);//指针引用，所以不一致
+        
     }
     return self;
 }
+
+- (NSObject *)getB
+{
+    return self.A.propertyB;
+}
+
 - (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)gestureRecognizer
 {
 //    if (self.contentOffset.x == self.frame.size.width*2){
@@ -127,8 +157,8 @@
     NSLog(@"Button clicked!");
     BOOL isAnimation = YES;
     
-//    OtherProfileViewController *otvc = [[OtherProfileViewController alloc] init];
-    SwiftOtherProfile *otvc = [[SwiftOtherProfile alloc] init];//需要BOOL customNavigationTransition = NO;
+    OtherProfileViewController *otvc = [[OtherProfileViewController alloc] init];
+//    SwiftOtherProfile *otvc = [[SwiftOtherProfile alloc] init];//需要BOOL customNavigationTransition = NO;
     [Responder.shareInstance.topVC.navigationController pushViewController:otvc animated:isAnimation];
 }
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath

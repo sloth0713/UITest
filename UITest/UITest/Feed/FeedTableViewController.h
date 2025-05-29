@@ -16,3 +16,10 @@
 
 @end
 
+
+@interface classA : NSObject
+
+//@property (nonatomic, strong) NSObject *propertyB;
+
+@end
+
