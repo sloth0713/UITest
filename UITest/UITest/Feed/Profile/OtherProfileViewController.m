@@ -55,8 +55,8 @@ static os_signpost_id_t _logId;
     self.tableVC.view.frame = CGRectMake(0, profileHeadHeight, self.view.frame.size.width, self.view.frame.size.height - profileHeadHeight*2);
     
     self.maskView = [[ProfileMaskView alloc] initWithFrame:CGRectMake(0, profileHeadHeight, self.view.frame.size.width, self.view.frame.size.height - profileHeadHeight*2)];
-//    [self.view addSubview:self.maskView];
-    [self.view addSubview:self.tableVC.view];
+    [self.view addSubview:self.maskView];
+//    [self.view addSubview:self.tableVC.view];
     [self addPanGesture];
 }
 

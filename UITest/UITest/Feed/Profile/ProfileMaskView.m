@@ -56,7 +56,8 @@
     
     //todo，写一个presentViewController的自定义转场动画
     UIViewController *topVC = Responder.shareInstance.topVC;
-    [topVC presentViewController:[[DetailTableViewController alloc] init] animated:YES completion:nil];
+//    [topVC presentViewController:[[DetailTableViewController alloc] init] animated:YES completion:nil];
+    [topVC.navigationController pushViewController:[[DetailTableViewController alloc] init] animated:YES];
 }
 
 #pragma mark - view life cycle

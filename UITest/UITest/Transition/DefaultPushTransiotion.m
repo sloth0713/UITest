@@ -15,7 +15,13 @@
 {
 //    [self animateTransitionLeftPush:transitionContext];
 //    [self animateTransitionRightPush:transitionContext];
-    [self animateTransitionPropertyAnimator:transitionContext];
+    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    
+    if ([NSStringFromClass([toVC class]) isEqualToString:@"DetailTableViewController"]) {
+        [self animateTransitionMagnify:transitionContext];
+    } else {
+        [self animateTransitionPropertyAnimator:transitionContext];
+    }
 //    [self animateTransitionOCPropertyAnimator:transitionContext];
 }
 
@@ -129,6 +135,28 @@
         [transitionContext completeTransition:YES];
     }];
 }
+
+- (void)animateTransitionMagnify:(nonnull id<UIViewControllerContextTransitioning>)transitionContext
+{
+    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    // 获取容器视图
+    UIView *containerView = [transitionContext containerView];
+    // 添加目标视图到容器
+    [containerView addSubview:toVC.view];
+    // 初始状态：目标视图缩小
+    toVC.view.transform = CGAffineTransformMakeScale(0.1, 0.1);
+    // 执行动画
+    [UIView animateWithDuration:[self transitionDuration:transitionContext]
+                     animations:^{
+                         // 恢复原始大小
+                         toVC.view.transform = CGAffineTransformIdentity;
+                     } completion:^(BOOL finished) {
+                         // 完成后通知系统
+                         [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
+                     }];
+}
+
 
 - (NSTimeInterval)transitionDuration:(nullable id<UIViewControllerContextTransitioning>)transitionContext
 {

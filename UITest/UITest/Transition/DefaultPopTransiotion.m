@@ -12,7 +12,14 @@
 
 - (void)animateTransition:(nonnull id<UIViewControllerContextTransitioning>)transitionContext
 {
-    [self animateTransitionPop:transitionContext];
+//    [self animateTransitionPop:transitionContext];
+    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    
+    if ([NSStringFromClass([fromVC class]) isEqualToString:@"DetailTableViewController"]) {
+        [self animateTransitionShrink:transitionContext];
+    }else {
+        [self animateTransitionPop:transitionContext];
+    }
     
 //    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
 //    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
@@ -90,6 +97,30 @@
 //                                                                                                                                                                                           });
                                                                                             
                                                                                                                                                                     }];
+}
+
+- (void)animateTransitionShrink:(id<UIViewControllerContextTransitioning>)transitionContext
+{
+    // 获取视图控制器
+    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    // 获取容器视图
+    UIView *containerView = [transitionContext containerView];
+    // 添加目标视图到容器
+    [containerView addSubview:toVC.view];
+    // 初始状态：目标视图放大
+    toVC.view.transform = CGAffineTransformMakeScale(2.0, 2.0);
+    toVC.view.alpha = 0.0;
+    // 执行动画
+    [UIView animateWithDuration:[self transitionDuration:transitionContext]
+                     animations:^{
+                         // 缩小到原始大小并显示
+                         toVC.view.transform = CGAffineTransformIdentity;
+                         toVC.view.alpha = 1.0;
+                     } completion:^(BOOL finished) {
+                         // 完成后通知系统
+                         [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
+                     }];
 }
 
 - (void)animateTransitionPop:(id<UIViewControllerContextTransitioning>)transitionContext
